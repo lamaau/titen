@@ -24,7 +24,7 @@ class MacroServiceProvider extends ServiceProvider
     }
 
     /**
-     * Inertia
+     * Inertia.
      *
      * @return void
      */
@@ -36,7 +36,7 @@ class MacroServiceProvider extends ServiceProvider
     }
 
     /**
-     * Where like for query database
+     * Where like for query database.
      *
      * @return void
      */

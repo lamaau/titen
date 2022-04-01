@@ -8,6 +8,6 @@ class FailedListener
 {
     public function handle($event)
     {
-        // 
+        //
     }
 }

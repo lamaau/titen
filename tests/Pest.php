@@ -58,7 +58,7 @@ function createUser($attributes = [])
 function actingAsAdminRole()
 {
     $user = createUser([
-        'email' => 'admin@mail.com'
+        'email' => 'admin@mail.com',
     ]);
 
     $user->assignRole('other');

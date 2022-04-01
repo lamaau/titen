@@ -3,8 +3,8 @@
 namespace App\Enums;
 
 use App\Enums\Concerns\HasLabel;
-use Illuminate\Support\Collection;
 use App\Enums\Concerns\InvokableCases;
+use Illuminate\Support\Collection;
 
 enum Status: int implements HasLabel
 {
