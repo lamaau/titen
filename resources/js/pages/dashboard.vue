@@ -27,12 +27,8 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr v-for="(item, index) in latests" :key="index" class="border-t transition hover:bg-gray-100">
-                      <td class="whitespace-nowrap p-4 text-sm font-bold text-purple-600">
-                        <v-app-link :href="`/logistics/purchase/${item.id}`" class="hover:underline">{{ item.code }}</v-app-link>
-                      </td>
-                      <td class="whitespace-nowrap p-4 text-sm font-semibold text-gray-600">{{ item.items }}</td>
-                      <td class="whitespace-nowrap p-4 text-sm font-semibold text-gray-600">Rp {{ item.prices }}</td>
+                    <tr class="border-t transition hover:bg-gray-100">
+                      <!--  -->
                     </tr>
                   </tbody>
                 </table>

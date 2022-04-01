@@ -1,9 +1,7 @@
 <template>
   <v-app-head title="Login" />
 
-  <div
-    class="relative bg-gray-200"
-  >
+  <div class="relative bg-gray-200">
     <div class="flex min-h-screen items-center justify-center">
       <div class="w-full max-w-md rounded-md bg-white shadow-md">
         <form class="mt-8 overflow-hidden rounded-lg shadow-xl" @submit.prevent="login">
@@ -34,8 +32,8 @@ export default {
   data() {
     return {
       form: this.$inertia.form({
-        email: 'admin@mail.com',
-        password: 'secret123',
+        email: "admin@mail.com",
+        password: "secret123",
         remember: false,
       }),
     };
