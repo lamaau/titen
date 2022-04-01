@@ -31,8 +31,7 @@ export default {
     app.component("v-icon", require("~/components/icon.vue").default);
     app.component("v-badge", require("~/components/badge.vue").default);
     app.component("v-modal", require("~/components/modal.vue").default);
-    app.component("v-table", require("~/components/table/table").default);
-    app.component("v-datatable", require("~/components/table/datatable.vue").default);
+    app.component("v-inertable", require("~/components/table/datatable.vue").default);
     app.component("v-dropdown", require("~/components/menu/dropdown.vue").default);
 
     // form

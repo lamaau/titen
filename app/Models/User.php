@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Traits\HasUuid;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -58,21 +59,27 @@ class User extends Authenticatable
         return UserFactory::new();
     }
 
-    public function getProfilePictureAttribute(): string
+    public function profilePicture(): Attribute
     {
-        return "https://ui-avatars.com/api/?name={$this->username}&amp;color=FFFFFF&amp;background=111827";
+        return new Attribute(
+            get: fn ($value) => is_null($value) ? "https://ui-avatars.com/api/?name={$this->username}&amp;color=FFFFFF&amp;background=111827" : $value,
+        );
     }
 
-    public function getUsernameAttribute($value): string
+    public function username(): Attribute
     {
-        return ucfirst($value);
+        return new Attribute(
+            get: fn ($value) => ucfirst($value),
+        );
     }
 
-    public function getRoleAttribute(): ?string
+    public function role(): Attribute
     {
         $role = auth()->user()->roles()->pluck('name')->first();
 
-        return strtolower($role) == 'admin' ? 'Administrator' : ucfirst($role);
+        return new Attribute(
+            get: fn ($value) => ucfirst($role)
+        );
     }
 
     public function scopeWithoutAdmin(Builder $query): Builder

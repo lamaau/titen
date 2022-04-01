@@ -48,8 +48,6 @@ import { TransitionRoot, TransitionChild, Dialog, DialogOverlay, DialogTitle } f
 const isOpen = ref(false);
 const focusRef = ref();
 
-const emit = defineEmits(["open"]);
-
 const props = defineProps({
   title: {
     type: String,
@@ -63,7 +61,6 @@ const closeModal = function () {
 
 const openModal = function (attr) {
   isOpen.value = true;
-  this.$emit("open", attr);
 };
 
 defineExpose({

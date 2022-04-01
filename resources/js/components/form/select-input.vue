@@ -1,6 +1,6 @@
 <template>
-  <div :class="$attrs.class" class="flex flex-col space-y-2">
-    <label v-if="label" class="text-sm" :for="id">{{ label }}</label>
+  <div :class="$attrs.class" class="flex flex-col">
+    <label v-if="label" class="form-label mb-1 text-sm capitalize" :for="id"> {{ label }} <span v-if="required" class="text-xs text-red-500">*</span> </label>
     <select
       :id="id"
       ref="input"
@@ -29,6 +29,10 @@ export default {
     },
     error: String,
     label: String,
+    required: {
+      type: Boolean,
+      default: () => false,
+    },
     modelValue: [String, Number, Boolean],
   },
   emits: ["update:modelValue"],

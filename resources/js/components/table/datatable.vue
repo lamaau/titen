@@ -99,7 +99,7 @@
     </div>
     <div class="flex items-center justify-between p-4">
       <div class="text-sm text-cool-gray-800 dark:text-cool-gray-200">
-        Menampilkan <span class="font-bold">{{ data.from ?? 0 }}</span> ke <span class="font-bold">{{ data.to ?? 0 }}</span> dari <span class="font-bold">{{ data.total }}</span>
+        Show <span class="font-bold">{{ data.from ?? 0 }}</span> to <span class="font-bold">{{ data.to ?? 0 }}</span> from <span class="font-bold">{{ data.total }}</span>
       </div>
       <pagination :links="data.links" />
     </div>

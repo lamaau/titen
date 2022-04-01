@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "140a13f5249ca112e5da4c5067d4d8a1",
+    "content-hash": "9dec79a963361debd6da6d1dd339f4dc",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2868,74 +2868,6 @@
             "time": "2022-03-04T16:39:25+00:00"
         },
         {
-            "name": "league/fractal",
-            "version": "0.19.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/fractal.git",
-                "reference": "06dc15f6ba38f2dde2f919d3095d13b571190a7c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/fractal/zipball/06dc15f6ba38f2dde2f919d3095d13b571190a7c",
-                "reference": "06dc15f6ba38f2dde2f919d3095d13b571190a7c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4"
-            },
-            "require-dev": {
-                "doctrine/orm": "^2.5",
-                "illuminate/contracts": "~5.0",
-                "mockery/mockery": "~0.9",
-                "pagerfanta/pagerfanta": "~1.0.0",
-                "phpunit/phpunit": "^4.8.35 || ^7.5",
-                "squizlabs/php_codesniffer": "~1.5|~2.0|~3.4",
-                "zendframework/zend-paginator": "~2.3"
-            },
-            "suggest": {
-                "illuminate/pagination": "The Illuminate Pagination component.",
-                "pagerfanta/pagerfanta": "Pagerfanta Paginator",
-                "zendframework/zend-paginator": "Zend Framework Paginator"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.13-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\Fractal\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Phil Sturgeon",
-                    "email": "me@philsturgeon.uk",
-                    "homepage": "http://philsturgeon.uk/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Handle the output of complex data structures ready for API output.",
-            "homepage": "http://fractal.thephpleague.com/",
-            "keywords": [
-                "api",
-                "json",
-                "league",
-                "rest"
-            ],
-            "support": {
-                "issues": "https://github.com/thephpleague/fractal/issues",
-                "source": "https://github.com/thephpleague/fractal/tree/0.19.2"
-            },
-            "time": "2020-01-24T23:17:29+00:00"
-        },
-        {
             "name": "league/mime-type-detection",
             "version": "1.9.0",
             "source": {
@@ -4772,6 +4704,73 @@
             "time": "2021-09-25T23:10:38+00:00"
         },
         {
+            "name": "rizkhal/inertable",
+            "version": "v0.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rizkhal/inertable.git",
+                "reference": "adee1db76758af2e649f43168f237ca0ba3c7d4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rizkhal/inertable/zipball/adee1db76758af2e649f43168f237ca0ba3c7d4e",
+                "reference": "adee1db76758af2e649f43168f237ca0ba3c7d4e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^8.62|^9.0.0",
+                "inertiajs/inertia-laravel": "^0.5.4",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.1",
+                "orchestra/testbench": "^7.1",
+                "pestphp/pest": "^1.20",
+                "pestphp/pest-plugin-laravel": "^1.1",
+                "pestphp/pest-plugin-parallel": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Rizkhal\\Inertable\\InertableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Rizkhal\\Inertable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rizkhal",
+                    "email": "lamaaurizkhal@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple datatable for inertia",
+            "support": {
+                "issues": "https://github.com/rizkhal/inertable/issues",
+                "source": "https://github.com/rizkhal/inertable/tree/v0.0.4"
+            },
+            "funding": [
+                {
+                    "url": "https://trakteer.id/rizkhal",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.buymeacoffee.com/rizkhal",
+                    "type": "custom"
+                }
+            ],
+            "time": "2022-04-01T04:46:06+00:00"
+        },
+        {
             "name": "spatie/db-dumper",
             "version": "3.2.0",
             "source": {
@@ -4977,67 +4976,6 @@
             "time": "2022-02-09T16:01:40+00:00"
         },
         {
-            "name": "spatie/fractalistic",
-            "version": "2.9.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/fractalistic.git",
-                "reference": "c4fc2b223a8f7321ece449abc2c59cc5baf470fd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/fractalistic/zipball/c4fc2b223a8f7321ece449abc2c59cc5baf470fd",
-                "reference": "c4fc2b223a8f7321ece449abc2c59cc5baf470fd",
-                "shasum": ""
-            },
-            "require": {
-                "league/fractal": "^0.19.0",
-                "php": "^7.3|^8.0"
-            },
-            "require-dev": {
-                "illuminate/pagination": "~5.3.0|~5.4.0",
-                "phpunit/phpunit": "^9.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\Fractalistic\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A developer friendly wrapper around Fractal",
-            "homepage": "https://github.com/spatie/fractalistic",
-            "keywords": [
-                "api",
-                "fractal",
-                "fractalistic",
-                "spatie",
-                "transform"
-            ],
-            "support": {
-                "issues": "https://github.com/spatie/fractalistic/issues",
-                "source": "https://github.com/spatie/fractalistic/tree/2.9.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/spatie",
-                    "type": "github"
-                }
-            ],
-            "time": "2020-11-12T18:19:10+00:00"
-        },
-        {
             "name": "spatie/laravel-backup",
             "version": "8.1.1",
             "source": {
@@ -5131,85 +5069,6 @@
                 }
             ],
             "time": "2022-03-08T10:23:50+00:00"
-        },
-        {
-            "name": "spatie/laravel-fractal",
-            "version": "6.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/laravel-fractal.git",
-                "reference": "926c5c8b7c2d7e3385993d2f56d413197a4b397e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-fractal/zipball/926c5c8b7c2d7e3385993d2f56d413197a4b397e",
-                "reference": "926c5c8b7c2d7e3385993d2f56d413197a4b397e",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "^9.0",
-                "illuminate/support": "^9.0",
-                "php": "^8.0",
-                "spatie/fractalistic": "^2.5",
-                "spatie/laravel-package-tools": "^1.11"
-            },
-            "require-dev": {
-                "ext-json": "*",
-                "orchestra/testbench": "^7.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Spatie\\Fractal\\FractalServiceProvider"
-                    ],
-                    "aliases": {
-                        "Fractal": "Spatie\\Fractal\\Facades\\Fractal"
-                    }
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/helpers.php"
-                ],
-                "psr-4": {
-                    "Spatie\\Fractal\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "An easy to use Fractal integration for Laravel applications",
-            "homepage": "https://github.com/spatie/laravel-fractal",
-            "keywords": [
-                "api",
-                "fractal",
-                "laravel",
-                "laravel-fractal",
-                "lumen",
-                "spatie",
-                "transform"
-            ],
-            "support": {
-                "issues": "https://github.com/spatie/laravel-fractal/issues",
-                "source": "https://github.com/spatie/laravel-fractal/tree/6.0.0"
-            },
-            "funding": [
-                {
-                    "url": "https://spatie.be/open-source/support-us",
-                    "type": "custom"
-                }
-            ],
-            "time": "2022-01-13T10:44:56+00:00"
         },
         {
             "name": "spatie/laravel-package-tools",
@@ -11499,5 +11358,5 @@
         "php": "^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.1.0"
 }
