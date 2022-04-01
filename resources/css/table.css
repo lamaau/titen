@@ -1,0 +1,15 @@
+.table-heading-cell {
+    @apply px-4 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:bg-cool-gray-700 dark:text-cool-gray-200;
+}
+
+.table-body-cell {
+    @apply px-4 py-3 whitespace-nowrap text-xs dark:bg-cool-gray-600 dark:text-cool-gray-200;
+}
+
+.table-head {
+    @apply border-b dark:border-gray-600 font-medium p-4 pt-0 pb-3 text-gray-400 dark:text-gray-200 text-left;
+}
+
+.table-cell {
+    @apply p-2 border-b border-gray-100 dark:border-gray-700 text-gray-500 dark:text-gray-400;
+}

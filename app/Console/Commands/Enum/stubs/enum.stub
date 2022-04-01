@@ -1,0 +1,12 @@
+<?php
+
+declare(strict_types=1);
+
+namespace DummyNamespace;
+
+use App\Enums\Concerns\InvokableCases;
+
+enum DummyClass: int
+{
+    use InvokableCases;
+}

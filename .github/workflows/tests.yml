@@ -1,0 +1,46 @@
+name: Run tests
+
+on: ["push", "pull_request"]
+
+jobs:
+  run-tests:
+    name: Run tests
+    runs-on: ubuntu-latest
+    services:
+      mariadb:
+        image: mariadb:10.4.12-bionic
+        env:
+          MYSQL_ALLOW_EMPTY_PASSWORD: true
+          MYSQL_DATABASE: rizkhal-testing
+          MYSQL_USER: rizkhal
+          MYSQL_PASSWORD: rizkhal
+        ports:
+          - 33060:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.1"
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick
+          coverage: none
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: vendor
+          key: composer-${{ hashFiles('composer.lock') }}
+
+      - name: Run composer update
+        run: composer update -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+
+      - name: Execute tests
+        run: ./vendor/bin/pest --colors=always --exclude-group=integration
+        env:
+          DB_PORT: ${{ job.services.mariadb.ports[3306] }}
+          DB_DATABASE: rizkhal-testing
+          DB_USERNAME: rizkhal
+          DB_PASSWORD: rizkhal

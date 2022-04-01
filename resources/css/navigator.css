@@ -1,0 +1,3 @@
+.menu {
+    @apply flex items-center gap-3 px-3 py-2 rounded-lg font-medium transition hover:bg-indigo-500 focus:bg-indigo-500;
+}
