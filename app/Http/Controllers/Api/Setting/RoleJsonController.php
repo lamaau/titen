@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Api\Setting;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Setting\RoleResource;
+use Illuminate\Http\Request;
 
 class RoleJsonController extends Controller
 {

@@ -2,8 +2,8 @@
 
 namespace App\Http\Requests\Setting;
 
-use Illuminate\Support\Arr;
 use App\Abstracts\FormRequest;
+use Illuminate\Support\Arr;
 use Illuminate\Validation\Rule;
 
 class PermissionRequest extends FormRequest
@@ -11,7 +11,7 @@ class PermissionRequest extends FormRequest
     public function attributes()
     {
         return [
-            'name' => 'Permission Name'
+            'name' => 'Permission Name',
         ];
     }
 
@@ -20,7 +20,7 @@ class PermissionRequest extends FormRequest
         return [
             'name' => ['required', Rule::unique('permissions', 'name')],
             'display_name' => ['nullable'],
-            'guard' => ['required']
+            'guard' => ['required'],
         ];
     }
 

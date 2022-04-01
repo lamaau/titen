@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Setting;
 
-use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-use App\Inertable\Setting\PermissionTable;
 use App\Http\Requests\Setting\PermissionRequest;
+use App\Inertable\Setting\PermissionTable;
+use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Models\Permission;
 
 class PermissionController extends Controller

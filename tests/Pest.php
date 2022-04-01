@@ -58,5 +58,6 @@ function createUser($attributes = [])
 function actingAsAdminRole()
 {
     $admin = User::firstWhere('email', 'admin@mail.com');
+
     return actingAs($admin);
 }
