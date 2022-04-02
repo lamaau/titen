@@ -11,6 +11,8 @@ import VueApexCharts from "vue3-apexcharts";
 import VueToast from "vue-toast-notification";
 import "vue-toast-notification/dist/theme-sugar.css";
 
+import VueModal from "~/plugins/modal";
+
 export default {
   install: (app, options) => {
     // inertia
@@ -30,7 +32,7 @@ export default {
     // common
     app.component("v-icon", require("~/components/icon.vue").default);
     app.component("v-badge", require("~/components/badge.vue").default);
-    app.component("v-modal", require("~/components/modal.vue").default);
+    app.component("v-modal", require("~/components/modal/modal.vue").default);
     app.component("v-inertable", require("~/components/table/datatable.vue").default);
     app.component("v-dropdown", require("~/components/menu/dropdown.vue").default);
 
@@ -61,5 +63,7 @@ export default {
     app.use(VueToast, {
       position: "top-right",
     });
+
+    app.use(VueModal);
   },
 };

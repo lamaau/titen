@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="submit" class="flex flex-col space-y-4">
+  <form @submit.prevent="submit" class="flex flex-col space-y-4 p-4">
     <v-text :required="true" label="Permission Name" v-model="form.name" :error="form.errors.name" />
     <v-select :required="true" label="Guard" v-model="form.guard" :error="form.errors.guard">
       <option value="web">web</option>
@@ -7,8 +7,8 @@
     </v-select>
     <v-textarea label="Description" v-model="form.description" :error="form.errors.description" />
     <div class="flex flex-row items-center space-x-2 ml-auto">
-      <button type="button" class="btn-purple">Cancel</button>
-      <button type="submit" class="btn-purple">Save</button>
+      <button @click.prevent="$modal.close()" type="button" class="btn-purple">Cancel</button>
+      <v-loading-button :loading="form.processing" class="btn-purple">Save</v-loading-button>
     </div>
   </form>
 </template>
@@ -27,7 +27,7 @@ export default {
     submit() {
       this.form.post("/setting/role/permission", {
         onSuccess: () => {
-          this.$refs.create.closeModal();
+          this.$modal.close();
           this.$toast.success("Successfully create new permission");
         },
       });
