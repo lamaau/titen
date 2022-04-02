@@ -35,6 +35,7 @@ export default {
     app.component("v-dropdown", require("~/components/menu/dropdown.vue").default);
 
     // form
+    app.component("v-form-container", require("~/components/form/form-container.vue").default);
     app.component("v-text", require("~/components/form/text-input.vue").default);
     app.component("v-select", require("~/components/form/select-input.vue").default);
     app.component("v-number", require("~/components/form/number-input.vue").default);

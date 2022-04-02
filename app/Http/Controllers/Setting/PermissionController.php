@@ -12,7 +12,7 @@ class PermissionController extends Controller
 {
     public function index()
     {
-        return inertia('setting/permission/index')->inertable(new PermissionTable);
+        return inertia('setting/permission/index')->inertable(new PermissionTable)->title(__('Permission'));
     }
 
     public function store(PermissionRequest $request)
@@ -20,6 +20,20 @@ class PermissionController extends Controller
         DB::transaction(function () use ($request) {
             Permission::create($request->getData());
         });
+
+        return back();
+    }
+
+    public function update(Permission $permission, PermissionRequest $request)
+    {
+        DB::transaction(fn () => $permission->update($request->getData()));
+
+        return back();
+    }
+
+    public function destroy(Permission $permission)
+    {
+        DB::transaction(fn () => $permission->delete());
 
         return back();
     }

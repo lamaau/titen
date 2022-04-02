@@ -17,7 +17,12 @@ Breadcrumbs::for(
 
 Breadcrumbs::for(
     'setting.role.index',
-    fn (Trail $trail) => $trail->push(__('Access Control'), route('setting.role.index'))
+    fn (Trail $trail) => $trail->push(__('Role'), route('setting.role.index'))
+);
+
+Breadcrumbs::for(
+    'setting.role.create',
+    fn (Trail $trail) => $trail->parent('setting.role.index')->push(__('New'), route('setting.role.create'))
 );
 
 Breadcrumbs::for(

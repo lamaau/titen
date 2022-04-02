@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col">
+  <v-form-container title="New user">
     <v-multi-select label="Select Role" v-model="form.role" :error="form.errors.role" :required="true" url="api/v1/role" />
-  </div>
+  </v-form-container>
 </template>
 <script>
 export default {

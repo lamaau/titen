@@ -1,6 +1,7 @@
 <template>
   <div :class="$attrs.class">
-    <label v-if="label" class="form-label mb-2 text-sm capitalize dark:text-cool-gray-200" :for="id">{{ label }}:</label>
+    <label v-if="label" class="form-label mb-1 text-sm capitalize dark:text-cool-gray-200" :for="id"> {{ label }} <span v-if="required" class="text-xs text-red-500">*</span> </label>
+
     <textarea
       :id="id"
       ref="textarea"
@@ -28,6 +29,10 @@ export default {
     },
     error: String,
     label: String,
+    required: {
+      type: Boolean,
+      default: () => false,
+    },
     modelValue: String,
   },
   emits: ["update:modelValue"],

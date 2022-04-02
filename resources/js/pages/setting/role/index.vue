@@ -1,7 +1,7 @@
 <template>
   <v-inertable :allow-filter="false" :filters="inertable.filters" :data="inertable.data" :columns="inertable.columns">
     <template #attributes>
-      <button @click.prevent="$refs.create.openModal()" type="button" class="btn-purple focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">New Role</button>
+      <v-app-link href="/setting/role/create" class="btn-purple focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">New Role</v-app-link>
       <v-app-link href="/setting/role/permission" class="btn-purple focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"> Manage Permission </v-app-link>
     </template>
     <template #role="{ item }">
@@ -24,21 +24,12 @@
       </div>
     </template>
   </v-inertable>
-  <v-modal ref="create">
-    <template #content>
-      <div class="p-4">
-        <create />
-      </div>
-    </template>
-  </v-modal>
 </template>
 <script>
-import create from "./create.vue";
 import notAvailable from "~/components/table/not-available.vue";
 
 export default {
   components: {
-    create,
     notAvailable,
   },
   props: {

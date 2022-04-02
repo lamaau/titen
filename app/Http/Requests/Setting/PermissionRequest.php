@@ -11,16 +11,16 @@ class PermissionRequest extends FormRequest
     public function attributes()
     {
         return [
-            'name' => 'Permission Name',
+            'name' => 'permission name',
         ];
     }
 
     public function rules()
     {
         return [
-            'name' => ['required', Rule::unique('permissions', 'name')],
-            'display_name' => ['nullable'],
+            'name' => ['required', Rule::unique('permissions', 'name')->ignore($this->route('permission'))],
             'guard' => ['required'],
+            'description' => ['nullable'],
         ];
     }
 

@@ -26,7 +26,7 @@ class NavigatorServiceProvider extends ServiceProvider
                             ->for('/setting/user')
                             ->heroicon('UsersIcon')
                             ->icon('outline'),
-                        Nav::item(__('Access Control'))
+                        Nav::item(__('Role & Permission'))
                             ->for('/setting/role')
                             ->heroicon('LockClosedIcon')
                             ->icon('outline'),

@@ -15,12 +15,12 @@ class RoleController extends Controller
 {
     public function index(): Response
     {
-        return inertia('setting/role/index')->inertable(new RoleTable);
+        return inertia('setting/role/index')->inertable(new RoleTable)->title(__('Role'));
     }
 
     public function create(): Response
     {
-        return inertia('setting/role/create');
+        return inertia('setting/role/create')->title(__('New role'));
     }
 
     public function store(RoleRequest $request): RedirectResponse
