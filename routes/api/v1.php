@@ -1,7 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\Setting\RoleJsonController;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('/v1')->group(fn (): array => [
-    // ...
-]);
+Route::resource('role', RoleJsonController::class);

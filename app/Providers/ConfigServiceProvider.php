@@ -10,7 +10,7 @@ class ConfigServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        Carbon::setLocale('ID');
+        // Carbon::setLocale('ID');
         Schema::defaultStringLength(191);
     }
 }

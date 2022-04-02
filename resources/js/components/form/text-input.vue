@@ -1,6 +1,6 @@
 <template>
   <div :class="$attrs.class">
-    <label v-if="label" class="form-label mb-2 text-sm capitalize" :for="id">{{ label }}</label>
+    <label v-if="label" class="form-label mb-1 text-sm capitalize" :for="id"> {{ label }} <span v-if="required" class="text-xs text-red-500">*</span> </label>
     <input
       :id="id"
       ref="input"
@@ -33,6 +33,10 @@ export default {
     },
     error: String,
     label: String,
+    required: {
+      type: Boolean,
+      default: () => false,
+    },
     modelValue: [String, Number],
   },
   emits: ["update:modelValue"],

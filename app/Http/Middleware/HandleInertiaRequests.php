@@ -45,7 +45,7 @@ class HandleInertiaRequests extends Middleware
                 'error' => $request->session()->get('error'),
                 'success' => $request->session()->get('success'),
             ],
-            'app' => fn () => [
+            'app' => fn (): array => [
                 'breadcrumbs' => Breadcrumbs::current(),
                 'navigator' => $request->user() ? Nav::toJson() : [],
             ],

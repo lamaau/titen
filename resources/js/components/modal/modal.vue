@@ -27,12 +27,30 @@
             leave-to="opacity-0 scale-95"
           >
             <div
-              class="my-8 inline-block w-full max-w-md transform overflow-hidden rounded-lg border border-gray-200 bg-white text-left align-middle shadow-xl transition-all dark:bg-cool-gray-800"
+              class="
+                my-8
+                inline-block
+                w-full
+                max-w-md
+                transform
+                overflow-hidden
+                rounded-lg
+                border border-gray-200
+                bg-white
+                text-left
+                align-middle
+                shadow-xl
+                transition-all
+                dark:bg-cool-gray-800
+              "
             >
-              <DialogTitle v-if="title" as="h3" class="border-b bg-gray-50 p-4 text-xl"> {{ title }} </DialogTitle>
-
-              <!-- slot -->
-              <slot name="content" />
+              <div v-if="props.type == 'default'">
+                <DialogTitle v-if="title" as="h3" class="border-b bg-gray-50 p-4 text-xl"> {{ title }} </DialogTitle>
+                <slot />
+              </div>
+              <div v-if="props.type == 'destroy'">
+                <Confirm :title="props.title" :message="props.message" :accept="props.onAccept" :cancel="props.onCancel" />
+              </div>
             </div>
           </TransitionChild>
         </div>
@@ -43,17 +61,32 @@
 
 <script setup>
 import { ref } from "vue";
+import Confirm from "~/components/modal/confirm.vue";
 import { TransitionRoot, TransitionChild, Dialog, DialogOverlay, DialogTitle } from "@headlessui/vue";
 
 const isOpen = ref(false);
 const focusRef = ref();
 
-const emit = defineEmits(["open"]);
-
 const props = defineProps({
   title: {
     type: String,
     default: null,
+  },
+  message: {
+    type: String,
+    default: null,
+  },
+  type: {
+    type: String,
+    default: () => "default",
+  },
+  onAccept: {
+    type: Function,
+    default: () => null,
+  },
+  onCancel: {
+    type: Function,
+    default: () => null,
   },
 });
 
@@ -63,7 +96,6 @@ const closeModal = function () {
 
 const openModal = function (attr) {
   isOpen.value = true;
-  this.$emit("open", attr);
 };
 
 defineExpose({

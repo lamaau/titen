@@ -3,7 +3,7 @@
 
   <div :class="{ dark: dark }">
     <div class="flex min-h-screen w-full bg-gray-50 text-gray-700 dark:bg-cool-gray-600">
-      <aside class="fixed inset-y-0 left-0 z-20 hidden h-screen w-[14.8rem] translate-x-0 flex-col overflow-hidden shadow-2xl duration-300 lg:z-0 lg:flex lg:translate-x-0">
+      <aside class="fixed inset-y-0 left-0 z-20 hidden h-screen w-[14rem] translate-x-0 flex-col overflow-hidden shadow-2xl duration-300 lg:z-0 lg:flex lg:translate-x-0">
         <header class="flex h-[4rem] shrink-0 items-center border-b px-6 dark:border-none dark:bg-cool-gray-800">
           <v-app-link class="mx-auto text-xl font-bold tracking-tight dark:text-gray-200" href="/"> INERTIA STARTER </v-app-link>
         </header>
@@ -23,7 +23,7 @@
             <p class="text-sm font-bold dark:text-gray-200">{{ auth.user.username }}</p>
 
             <p class="text-xs text-gray-500 hover:text-gray-700 focus:text-gray-700 dark:text-gray-300">
-              <v-app-link href="/auth/logout" method="delete" as="button"> Keluar </v-app-link>
+              <v-app-link href="/auth/logout" method="delete" as="button"> Logout </v-app-link>
             </p>
           </div>
         </footer>

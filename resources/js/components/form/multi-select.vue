@@ -1,6 +1,6 @@
 <template>
   <div>
-    <label v-if="label" class="text-sm dark:text-cool-gray-200">{{ label }}</label>
+    <label v-if="label" class="form-label mb-1 text-sm capitalize"> {{ label }} <span v-if="required" class="text-xs text-red-500">*</span> </label>
 
     <Multiselect
       ref="selectInput"
@@ -82,7 +82,13 @@ export default {
       type: String,
       required: true,
     },
-    modelValue: Object,
+    required: {
+      type: Boolean,
+      default: () => false,
+    },
+    modelValue: {
+      type: Object
+    },
   },
   emits: ["update:modelValue", "clear"],
   data() {
