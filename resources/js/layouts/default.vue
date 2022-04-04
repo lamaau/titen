@@ -9,7 +9,7 @@
         </header>
 
         <!-- desktop navigator -->
-        <navigator :navigator="app.navigator" />
+        <navigator :navigators="app.navigators" />
 
         <footer class="flex shrink-0 items-center gap-3 border-t px-6 py-3 dark:border-none">
           <div

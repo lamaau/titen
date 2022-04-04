@@ -1,15 +1,11 @@
 <?php
 
-use App\Http\Controllers\Setting\PermissionController;
-use App\Http\Controllers\Setting\RoleController;
-use App\Http\Controllers\Setting\UserController;
+use App\Http\Controllers\Setting\ModuleController;
+use App\Http\Controllers\Setting\ModuleUploadController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('dashboard', DashboardController::class)->name('dashboard');
 Route::prefix('setting')->as('setting.')->group(fn (): array => [
-    Route::resource('user', UserController::class),
-    Route::resource('role', RoleController::class),
-    Route::prefix('role')->as('role.')->group(fn (): array => [
-        Route::resource('permission', PermissionController::class),
-    ]),
+    Route::get('/module', ModuleController::class),
+    Route::post('/module/upload', ModuleUploadController::class),
 ]);

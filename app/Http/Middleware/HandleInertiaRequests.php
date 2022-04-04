@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 use Nedwors\Navigator\Facades\Nav;
+use Nwidart\Modules\Facades\Module;
 use Tabuna\Breadcrumbs\Breadcrumbs;
 
 class HandleInertiaRequests extends Middleware
@@ -38,17 +39,33 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request)
     {
+        // dd(static::handleInertiaSharedData($request));
+
         return array_merge(parent::share($request), [
             'auth' => fn (): array => ['user' => $request->user() ?: null],
             'flash' => fn (): array => [
-                'print' => $request->session()->get('print'),
                 'error' => $request->session()->get('error'),
                 'success' => $request->session()->get('success'),
             ],
-            'app' => fn (): array => [
-                'breadcrumbs' => Breadcrumbs::current(),
-                'navigator' => $request->user() ? Nav::toJson() : [],
-            ],
+            'app' => fn (): array => $request->user() ? static::handleInertiaSharedData($request) : [],
         ]);
+    }
+
+    public static function handleInertiaSharedData(Request $request)
+    {
+        $modules = collect(Module::allEnabled())->keys()->map(fn ($value) => strtolower($value));
+
+        $navigators = $modules->map(function ($module) use ($request) {
+            return Nav::toJson($module);
+        });
+
+        $filtered = collect(Nav::toJson())->merge($navigators->filter(function ($collection) {
+            return count(json_decode($collection));
+        }));
+
+        return [
+            'navigators' => $filtered,
+            'breadcrumbs' => Breadcrumbs::current(),
+        ];
     }
 }

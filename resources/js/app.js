@@ -13,11 +13,24 @@ InertiaProgress.init({
 
 createInertiaApp({
   resolve: async (name) => {
-    // using asyncronus dynamic import
-    const page = await import(`./pages/${name}.vue`);
+    let page;
+    let parts = name.split("::");
 
-    if (page.layout === undefined && !excepts.includes(name)) {
-      page.default.layout = defaultLayout;
+    if (parts.length > 1) {
+      const [modul, paths] = parts;
+      const moduleFileName = paths.split(".").join("/");
+
+      page = await import(`../../modules/${modul}/Resources/assets/js/pages/${moduleFileName}.vue`);
+
+      if (page.layout == undefined && !excepts.includes(moduleFileName)) {
+        page.default.layout = defaultLayout;
+      }
+    } else {
+      page = await import(`./pages/${name}.vue`);
+
+      if (page.layout == undefined && !excepts.includes(name)) {
+        page.default.layout = defaultLayout;
+      }
     }
 
     return await page;

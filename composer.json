@@ -14,12 +14,14 @@
     "fruitcake/laravel-cors": "^2.0",
     "inertiajs/inertia-laravel": "^0.5.4",
     "intervention/image": "^2.7",
+    "joshbrw/laravel-module-installer": "^2.0",
     "laravel-notification-channels/telegram": "^2.0",
     "laravel/framework": "^9.0",
     "laravel/tinker": "^2.5",
     "league/flysystem-aws-s3-v3": "^3.0.1",
     "maatwebsite/excel": "^3.1",
     "nedwors/navigator": "^0.3.0",
+    "nwidart/laravel-modules": "^9.0",
     "rizkhal/inertable": "^0.0.4",
     "spatie/flysystem-dropbox": "^2.0",
     "spatie/laravel-backup": "^8.1.1",
@@ -42,6 +44,7 @@
   "autoload": {
     "psr-4": {
       "App\\": "app/",
+      "Modules\\": "modules/",
       "Database\\Factories\\": "database/factories/",
       "Database\\Seeders\\": "database/seeders/"
     },
@@ -72,7 +75,8 @@
   "extra": {
     "laravel": {
       "dont-discover": []
-    }
+    },
+    "module-dir": "modules"
   },
   "config": {
     "optimize-autoloader": true,
