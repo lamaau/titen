@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Inertable\Setting;
 
-use Rizkhal\Inertable\Column;
-use Modules\User\Entities\Role;
-use Rizkhal\Inertable\Inertable;
 use Illuminate\Database\Eloquent\Builder;
+use Modules\User\Entities\Role;
+use Rizkhal\Inertable\Column;
+use Rizkhal\Inertable\Inertable;
 
 class RoleTable extends Inertable
 {
