@@ -2,23 +2,64 @@
   <div>
     <ul class="text-md hidden items-center text-sm font-medium lg:flex">
       <li class="flex items-center">
-        <v-app-link href="/dashboard" class="text-gray-800 dark:text-cool-gray-300">Dashboard</v-app-link>
-        <svg v-if="items.length" class="m-0 h-6 w-6 text-gray-300 dark:text-cool-gray-300" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
-          <path d="m12.5 3.5-4 14" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+        <v-app-link
+          href="/dashboard"
+          class="text-gray-800 dark:text-cool-gray-300"
+          >Dashboard</v-app-link
+        >
+        <svg
+          v-if="items.length"
+          class="m-0 h-6 w-6 text-gray-300 dark:text-cool-gray-300"
+          viewBox="0 0 21 21"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m12.5 3.5-4 14"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
         </svg>
       </li>
 
-      <li v-for="(item, index) in items" :key="index" :class="{ 'flex items-center text-gray-500 dark:text-cool-gray-200': !isLast(index) }">
-        <v-app-link v-if="!isLast(index)" :href="item.url" class="text-gray-500 dark:text-cool-gray-200">
+      <li
+        v-for="(item, index) in items"
+        :key="index"
+        :class="{
+          'flex items-center text-gray-500 dark:text-cool-gray-200':
+            !isLast(index),
+        }"
+      >
+        <v-app-link
+          v-if="!isLast(index)"
+          :href="item.url"
+          class="text-gray-500 dark:text-cool-gray-200"
+        >
           {{ item.title }}
         </v-app-link>
 
-        <v-app-link v-else href="#" class="text-gray-500 dark:text-cool-gray-200">
+        <v-app-link
+          v-else
+          href="#"
+          class="text-gray-500 dark:text-cool-gray-200"
+        >
           {{ item.title }}
         </v-app-link>
 
-        <svg v-if="!isLast(index)" class="m-0 h-6 w-6 text-gray-300" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
-          <path d="m12.5 3.5-4 14" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+        <svg
+          v-if="!isLast(index)"
+          class="m-0 h-6 w-6 text-gray-300"
+          viewBox="0 0 21 21"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m12.5 3.5-4 14"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
         </svg>
       </li>
     </ul>

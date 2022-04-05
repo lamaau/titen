@@ -55,6 +55,14 @@ function createUser($attributes = [])
     return User::factory()->create($attributes);
 }
 
+function actingAsGeneralUser()
+{
+    createUser(['email' => 'general@mail.com']);
+    $user = User::firstWhere('email', 'general@mail.com');
+
+    return actingAs($user);
+}
+
 function actingAsAdminRole()
 {
     $admin = User::firstWhere('email', 'admin@mail.com');

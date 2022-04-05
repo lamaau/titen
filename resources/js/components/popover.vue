@@ -18,8 +18,15 @@
       <PopoverPanel class="absolute z-10 mt-3 -translate-x-1/2 transform px-4">
         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
           <div class="">
-            <a v-for="item in solutions" :key="item.name" :href="item.href" class="bg-red-500f -m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out">
-              <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center text-red-500 sm:h-12 sm:w-12">
+            <a
+              v-for="item in solutions"
+              :key="item.name"
+              :href="item.href"
+              class="bg-red-500f -m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out"
+            >
+              <div
+                class="flex h-10 w-10 flex-shrink-0 items-center justify-center text-red-500 sm:h-12 sm:w-12"
+              >
                 <div v-html="item.icon"></div>
               </div>
               <div class="ml-4">

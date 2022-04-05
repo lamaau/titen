@@ -1,5 +1,3 @@
 <template>
-    <div>
-        INSTALL MODULE
-    </div>
+  <div>INSTALL MODULE</div>
 </template>

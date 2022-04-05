@@ -2,7 +2,15 @@
 import { Head, Link } from "@inertiajs/inertia-vue3";
 
 // headlessui
-import { MenuItem, MenuItems, MenuButton, Menu as MainMenu, Popover, PopoverButton, PopoverPanel } from "@headlessui/vue";
+import {
+  MenuItem,
+  MenuItems,
+  MenuButton,
+  Menu as MainMenu,
+  Popover,
+  PopoverButton,
+  PopoverPanel,
+} from "@headlessui/vue";
 
 // apex chart
 import VueApexCharts from "vue3-apexcharts";
@@ -33,28 +41,76 @@ export default {
     app.component("v-icon", require("~/components/icon.vue").default);
     app.component("v-badge", require("~/components/badge.vue").default);
     app.component("v-modal", require("~/components/modal/modal.vue").default);
-    app.component("v-inertable", require("~/components/table/datatable.vue").default);
-    app.component("v-dropdown", require("~/components/menu/dropdown.vue").default);
+    app.component(
+      "v-inertable",
+      require("~/components/table/datatable.vue").default,
+    );
+    app.component(
+      "v-dropdown",
+      require("~/components/menu/dropdown.vue").default,
+    );
 
     // form
-    app.component("v-form-container", require("~/components/form/form-container.vue").default);
-    app.component("v-text", require("~/components/form/text-input.vue").default);
-    app.component("v-select", require("~/components/form/select-input.vue").default);
-    app.component("v-number", require("~/components/form/number-input.vue").default);
-    app.component("v-textarea", require("~/components/form/textarea-input.vue").default);
-    app.component("v-checkbox", require("~/components/form/checkbox-input.vue").default);
-    app.component("v-flat-pickr", require("~/components/form/flat-pickr-input").default);
-    app.component("v-multi-select", require("~/components/form/multi-select.vue").default);
-    app.component("v-loading-button", require("~/components/form/loading-button.vue").default);
-    app.component("v-loading-button2", require("~/components/form/loading-button2.vue").default);
-    app.component("v-phone-number", require("~/components/form/phone-number.vue").default);
+    app.component(
+      "v-form-container",
+      require("~/components/form/form-container.vue").default,
+    );
+    app.component(
+      "v-text",
+      require("~/components/form/text-input.vue").default,
+    );
+    app.component(
+      "v-select",
+      require("~/components/form/select-input.vue").default,
+    );
+    app.component(
+      "v-number",
+      require("~/components/form/number-input.vue").default,
+    );
+    app.component(
+      "v-textarea",
+      require("~/components/form/textarea-input.vue").default,
+    );
+    app.component(
+      "v-checkbox",
+      require("~/components/form/checkbox-input.vue").default,
+    );
+    app.component(
+      "v-flat-pickr",
+      require("~/components/form/flat-pickr-input").default,
+    );
+    app.component(
+      "v-multi-select",
+      require("~/components/form/multi-select.vue").default,
+    );
+    app.component(
+      "v-loading-button",
+      require("~/components/form/loading-button.vue").default,
+    );
+    app.component(
+      "v-loading-button2",
+      require("~/components/form/loading-button2.vue").default,
+    );
+    app.component(
+      "v-phone-number",
+      require("~/components/form/phone-number.vue").default,
+    );
 
     // card
-    app.component("v-simple-card", require("~/components/card-simple.vue").default);
-    app.component("v-simple-card-stats", require("~/components/card-simple-stats.vue").default);
+    app.component(
+      "v-simple-card",
+      require("~/components/card-simple.vue").default,
+    );
+    app.component(
+      "v-simple-card-stats",
+      require("~/components/card-simple-stats.vue").default,
+    );
 
     // alert
-    app.component("v-simple-alert", require("~/components/alert/simple-alert.vue").default);
+    app.component(
+      "v-simple-alert",
+      require("~/components/alert/simple-alert.vue").default,
+    );
 
     // apex charts
     app.component("v-apexchart", VueApexCharts);

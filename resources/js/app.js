@@ -20,7 +20,9 @@ createInertiaApp({
       const [modul, paths] = parts;
       const moduleFileName = paths.split(".").join("/");
 
-      page = await import(`../../modules/${modul}/Resources/assets/js/pages/${moduleFileName}.vue`);
+      page = await import(
+        `../../modules/${modul}/Resources/assets/js/pages/${moduleFileName}.vue`
+      );
 
       if (page.layout == undefined && !excepts.includes(moduleFileName)) {
         page.default.layout = defaultLayout;

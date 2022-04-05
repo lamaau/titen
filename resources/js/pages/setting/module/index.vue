@@ -26,7 +26,7 @@ export default {
         title: "Install module",
         component: require("./install.vue").default,
       });
-    }
+    },
   },
 };
 </script>

@@ -1,6 +1,12 @@
 <template>
   <div :class="$attrs.class">
-    <label v-if="label" class="form-label mb-1 text-sm capitalize dark:text-cool-gray-200" :for="id"> {{ label }} <span v-if="required" class="text-xs text-red-500">*</span> </label>
+    <label
+      v-if="label"
+      class="form-label mb-1 text-sm capitalize dark:text-cool-gray-200"
+      :for="id"
+    >
+      {{ label }} <span v-if="required" class="text-xs text-red-500">*</span>
+    </label>
 
     <textarea
       :id="id"

@@ -18,7 +18,7 @@ export default {
       this.form.file = event.target.files[0];
     },
     upload() {
-        this.form.post('/setting/module/upload')
+      this.form.post("/setting/module/upload");
     },
   },
 };
