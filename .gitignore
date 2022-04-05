@@ -15,4 +15,7 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-/modules/*
+
+# remove all from modules except .gitkeep
+modules/*
+!modules/.gitkeep
