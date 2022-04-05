@@ -14,14 +14,14 @@
       <slot />
     </div>
     <div class="flex flex-row items-center space-x-2 ml-auto p-4">
-      <button @click.prevent="$emit('onReset')" class="btn-purple">Reset</button>
-      <button @click.prevent="$emit('onSubmit')" class="btn-purple">Save</button>
+      <button @click.prevent="$emit('onCancel')" class="btn-red btn-ring-red">Cancel</button>
+      <button @click.prevent="$emit('onSubmit')" class="btn-purple btn-ring-purple">Save</button>
     </div>
   </div>
 </template>
 <script>
 export default {
-  emits: ["onSubmit", "onReset"],
+  emits: ["onSubmit", "onCancel"],
   props: {
     title: {
       type: String,

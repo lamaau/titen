@@ -45,7 +45,7 @@
               "
             >
               <div v-if="props.type == 'default'">
-                <DialogTitle v-if="title" as="h3" class="border-b bg-gray-50 p-4 text-xl"> {{ title }} </DialogTitle>
+                <!-- <DialogTitle v-if="title" as="h3" class="border-b bg-gray-50 p-4 text-xl"> {{ title }} </DialogTitle> -->
                 <slot />
               </div>
               <div v-if="props.type == 'destroy'">
