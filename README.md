@@ -7,4 +7,7 @@
 <a href="https://github.com/ayuwind/laravel-inertia-vue-starter/actions/workflows/php-cs-fixer.yml/badge.svg">
 <img alt="GitHub cs fixer" src="https://github.com/ayuwind/laravel-inertia-vue-starter/actions/workflows/php-cs-fixer.yml/badge.svg">
 </a>
+    <a href="https://github.com/ayuwind/laravel-inertia-vue-starter/actions/workflows/eslint.yml/badge.svg">
+<img alt="GitHub cs fixer" src="https://github.com/ayuwind/laravel-inertia-vue-starter/actions/workflows/eslint.yml/badge.svg">
+</a>
 </p>
