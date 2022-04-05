@@ -3,7 +3,7 @@ name: Eslint
 on: [push]
 
 jobs:
-  fix:prettier:
+  automerge:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
