@@ -7,6 +7,10 @@ module.exports = {
     alias: {
       "~": path.resolve("./resources/js"),
     },
+    fallback: {
+      fs: require.resolve("path-browserify"),
+      path: require.resolve("path-browserify"),
+    },
     extensions: [".js", ".vue", ".json"],
   },
   devServer: {

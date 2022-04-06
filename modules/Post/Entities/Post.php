@@ -4,8 +4,8 @@ namespace Modules\Post\Entities;
 
 use App\Models\Relations\HasAuthor;
 use App\Models\Traits\HasUuid;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
@@ -16,7 +16,7 @@ class Post extends Model
     protected $table = 'posts';
 
     protected $fillable = [
-        'slug'
+        'slug',
     ];
 
     protected static function newFactory()

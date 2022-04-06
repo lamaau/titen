@@ -2,8 +2,8 @@
 
 namespace Modules\User\Database\factories;
 
-use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class PermissionFactory extends Factory
 {
@@ -27,4 +27,3 @@ class PermissionFactory extends Factory
         ];
     }
 }
-

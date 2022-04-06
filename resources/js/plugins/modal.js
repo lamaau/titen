@@ -20,7 +20,7 @@ const useModal = (app, options) => {
         type: "default",
       });
 
-      const childComponent = () => h(mergedProps.component);
+      const childComponent = () => h(mergedProps.component, mergedProps);
 
       component(mergedProps, childComponent);
 

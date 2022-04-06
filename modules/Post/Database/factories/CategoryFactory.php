@@ -2,12 +2,12 @@
 
 namespace Modules\Post\Database\factories;
 
-use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Foundation\Testing\WithoutEvents;
+use Illuminate\Support\Str;
 
 class CategoryFactory extends Factory
-{    
+{
     /**
      * The name of the factory's corresponding model.
      *
@@ -24,7 +24,7 @@ class CategoryFactory extends Factory
     {
         return [
             'name' => Str::random(10),
-            'description' => Str::random(10)
+            'description' => Str::random(10),
         ];
     }
 }

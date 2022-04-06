@@ -6,9 +6,6 @@
     <template #role="{ item }">
       <span class="rounded-md bg-purple-200 px-2 py-1 text-xs font-medium text-purple-700">{{ item.role }}</span>
     </template>
-    <template #last_logged_in_at="{ item: { last_logged_in_at } }">
-      <not-available :value="$helper.shortTimestamp(last_logged_in_at)" />
-    </template>
     <template #created_at="{ item: { created_at } }">
       <span>{{ $helper.formatDate(created_at) }}</span>
     </template>
@@ -25,12 +22,7 @@
   </v-inertable>
 </template>
 <script>
-import notAvailable from "~/components/table/not-available.vue";
-
 export default {
-  components: {
-    notAvailable,
-  },
   props: {
     inertable: Object,
   },

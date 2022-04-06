@@ -38,12 +38,16 @@ export default {
     app.component("v-popover-button", PopoverButton);
 
     // common
-    app.component("v-icon", require("~/components/icon.vue").default);
-    app.component("v-badge", require("~/components/badge.vue").default);
+    app.component("v-icon", require("~/components/common/icon.vue").default);
+    app.component("v-badge", require("~/components/common/badge.vue").default);
     app.component("v-modal", require("~/components/modal/modal.vue").default);
     app.component(
       "v-inertable",
       require("~/components/table/datatable.vue").default,
+    );
+    app.component(
+      "v-nullable",
+      require("~/components/common/not-available.vue").default,
     );
     app.component(
       "v-dropdown",

@@ -14,8 +14,8 @@
         New Category
       </button>
     </template>
-    <template #last_logged_in_at="{ item: { last_logged_in_at } }">
-      <not-available :value="$helper.shortTimestamp(last_logged_in_at)" />
+    <template #description="{ item: { description } }">
+      <v-nullable :value="description" />
     </template>
     <template #created_at="{ item: { created_at } }">
       <span>{{ $helper.formatDate(created_at) }}</span>
@@ -23,14 +23,29 @@
     <template #action="{ item: { id } }">
       <div class="flex space-x-2">
         <button
-          class="rounded-md bg-yellow-400 p-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
+          @click.prevent="edit(id)"
+          class="
+            p-2
+            rounded-md
+            focus:ring-2
+            bg-yellow-400
+            focus:outline-none focus:ring-offset-2 focus:ring-yellow-400
+          "
         >
           <v-icon name="PencilIcon" type="solid" class="h-3 w-3 text-white" />
         </button>
         <button
           @click.prevent="destroy(id)"
           type="button"
-          class="rounded-md bg-red-500 p-2 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+          class="
+            p-2
+            rounded-md
+            bg-red-500
+            focus:ring-2
+            focus:outline-none
+            focus:ring-offset-2
+            focus:ring-red-500
+          "
         >
           <v-icon name="TrashIcon" type="solid" class="h-3 w-3 text-white" />
         </button>
@@ -39,20 +54,29 @@
   </v-inertable>
 </template>
 <script>
-import notAvailable from "~/components/table/not-available.vue";
+import { mapGetters } from "vuex";
 
 export default {
-  components: {
-    notAvailable,
-  },
   props: {
     inertable: Object,
   },
+  computed: mapGetters({
+    category: "category/getCategory",
+  }),
   methods: {
     create() {
       this.$modal.open({
         title: "New Category",
         component: require("./create.vue").default,
+      });
+    },
+    async edit(id) {
+      await this.$store.dispatch("category/setCategory", id);
+
+      this.$modal.open({
+        title: "Update Category",
+        category: this.category,
+        component: require("./edit.vue").default,
       });
     },
     destroy(id) {
@@ -61,9 +85,8 @@ export default {
         message: "This will permanently delete the category from database",
         onCancel: () => this.$modal.close(),
         onAccept: () => {
-          this.$inertia.delete(`/setting/role/permission/${id}`, {
+          this.$inertia.delete(`/category/${id}`, {
             onSuccess: () => {
-              this.$toast.success("Successfully delete permission");
               this.$modal.close();
             },
           });

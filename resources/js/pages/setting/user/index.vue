@@ -20,7 +20,7 @@
       >
     </template>
     <template #last_logged_in_at="{ item: { last_logged_in_at } }">
-      <not-available :value="$helper.shortTimestamp(last_logged_in_at)" />
+      <v-nullable :value="$helper.shortTimestamp(last_logged_in_at)" />
     </template>
     <template #created_at="{ item: { created_at } }">
       <span>{{ $helper.formatDate(created_at) }}</span>
@@ -43,10 +43,7 @@
   </v-inertable>
 </template>
 <script>
-import notAvailable from "~/components/table/not-available.vue";
-
 export default {
-  components: { notAvailable },
   props: {
     inertable: Object,
   },

@@ -15,7 +15,7 @@ it('has index page', function () {
 
 it('can add new', function () {
     $this->post(route('category.store'), [
-        'name' => 'new-category'
+        'name' => 'new-category',
     ])->assertStatus(302)->assertSessionHasNoErrors();
 
     $this->assertDatabaseCount('categories', 1);
@@ -24,28 +24,38 @@ it('can add new', function () {
 
 it('can see name required error', function () {
     $this->post(route('category.store'), [
-        'name' => null
+        'name' => null,
     ])->assertSessionHasErrors(['name']);
 });
 
 it('can update category', function () {
     $category = Category::factory()->create([
-        'name' => 'old-category'
+        'name' => 'old-category',
     ]);
 
     $this->put(route('category.update', $category->id), [
-        'name' => 'new-category'
+        'name' => 'new-category',
     ])->assertStatus(302)->assertSessionHasNoErrors();
 
     $this->assertDatabaseCount('categories', 1);
+    $this->assertDatabaseHas('categories', ['name' => 'new-category']);
+});
+
+it('can delete', function () {
+    $category = Category::factory()->create([
+        'name' => 'old-category',
+    ]);
+
+    $this->delete(route('category.destroy', $category->id));
+
     $this->assertDatabaseHas('categories', [
-        'name' => 'new-category'
+        'deleted_at' => now(),
     ]);
 });
 
 it('has soft deleted', function () {
     $category = Category::factory()->create([
-        'name' => 'old-category'
+        'name' => 'old-category',
     ]);
 
     $category->delete();

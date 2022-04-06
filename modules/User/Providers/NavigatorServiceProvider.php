@@ -3,8 +3,8 @@
 namespace Modules\User\Providers;
 
 use App\Models\User;
-use Nedwors\Navigator\Facades\Nav;
 use Illuminate\Support\ServiceProvider;
+use Nedwors\Navigator\Facades\Nav;
 
 class NavigatorServiceProvider extends ServiceProvider
 {

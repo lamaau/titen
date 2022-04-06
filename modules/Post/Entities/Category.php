@@ -4,8 +4,8 @@ namespace Modules\Post\Entities;
 
 use App\Models\Relations\HasAuthor;
 use App\Models\Traits\HasUuid;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Category extends Model
@@ -19,7 +19,7 @@ class Category extends Model
 
     protected $fillable = [
         'name',
-        'description'
+        'description',
     ];
 
     protected static function newFactory()

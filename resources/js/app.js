@@ -11,6 +11,8 @@ InertiaProgress.init({
   showSpinner: true,
 });
 
+let currentActiveModule = null;
+
 createInertiaApp({
   resolve: async (name) => {
     let page;
@@ -27,6 +29,8 @@ createInertiaApp({
       if (page.layout == undefined && !excepts.includes(moduleFileName)) {
         page.default.layout = defaultLayout;
       }
+
+      currentActiveModule = modul;
     } else {
       page = await import(`./pages/${name}.vue`);
 
@@ -41,6 +45,13 @@ createInertiaApp({
   setup({ el, App, props, plugin }) {
     const app = createApp({ render: () => h(App, props) }).use(plugin);
 
+    if (currentActiveModule) {
+      const modulePlugins =
+        require(`../../modules/${currentActiveModule}/Resources/assets/js/app.js`).default;
+
+      app.use({ ...modulePlugins, ...stores });
+    }
+
     app.config.productionTip = false;
 
     // helper
@@ -48,9 +59,6 @@ createInertiaApp({
 
     // global component
     app.use(registerGlobalComponent);
-
-    // vuex stores
-    app.use(stores);
 
     app.mount(el);
     return app;

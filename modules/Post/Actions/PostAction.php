@@ -9,11 +9,11 @@ class PostAction
 {
     public static function create(PostRequest $request)
     {
-        # code...
+        // code...
     }
 
     public static function update(Post $post, PostRequest $request)
     {
-        # code...
+        // code...
     }
 }

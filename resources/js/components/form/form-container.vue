@@ -21,7 +21,7 @@
         @click.prevent="$emit('onSubmit')"
         class="btn-purple btn-ring-purple"
       >
-        Save
+        {{ submitText }}
       </button>
     </div>
   </div>
@@ -33,6 +33,18 @@ export default {
     title: {
       type: String,
       required: false,
+    },
+    loading: {
+      type: Boolean,
+      default: false,
+    },
+    submitText: {
+      type: String,
+      default: () => "Save",
+    },
+    cancelText: {
+      type: String,
+      default: () => "Cancel",
     },
   },
 };

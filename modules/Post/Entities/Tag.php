@@ -4,14 +4,16 @@ namespace Modules\Post\Entities;
 
 use App\Models\Relations\HasAuthor;
 use App\Models\Traits\HasUuid;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Tag extends Model
 {
     use HasUuid,
         HasAuthor,
-        HasFactory;
+        HasFactory,
+        SoftDeletes;
 
     protected $table = 'tags';
 

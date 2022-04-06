@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-form-container
-      title="New Tag"
+      :title="title"
       @onCancel="$modal.close()"
       @onSubmit="save"
     >
@@ -23,6 +23,9 @@
 </template>
 <script>
 export default {
+  props: {
+    title: String,
+  },
   data() {
     return {
       form: this.$inertia.form({
