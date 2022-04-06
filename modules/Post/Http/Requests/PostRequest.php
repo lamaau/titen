@@ -12,7 +12,7 @@ class PostRequest extends FormRequest
         return [
             'title' => ['required', 'string'],
             'slug' => ['required', 'string', Rule::unique('posts', 'slug')->ignore($this->route('post'))],
-            'content' => ['required', 'string']
+            'content' => ['required', 'string'],
         ];
     }
 }
