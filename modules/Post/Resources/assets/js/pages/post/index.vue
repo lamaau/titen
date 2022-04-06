@@ -6,13 +6,9 @@
     :columns="inertable.columns"
   >
     <template #attributes>
-      <button
-        @click.prevent="create"
-        type="button"
-        class="btn-purple btn-ring-purple"
-      >
+      <v-app-link href="/post/create" class="btn-purple btn-ring-purple">
         New Post
-      </button>
+      </v-app-link>
     </template>
     <template #created_at="{ item: { created_at } }">
       <span>{{ $helper.formatDate(created_at) }}</span>
@@ -20,14 +16,30 @@
     <template #action="{ item: { id } }">
       <div class="flex space-x-2">
         <button
-          class="rounded-md bg-yellow-400 p-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
+          class="
+            rounded-md
+            bg-yellow-400
+            p-2
+            focus:outline-none
+            focus:ring-2
+            focus:ring-yellow-400
+            focus:ring-offset-2
+          "
         >
           <v-icon name="PencilIcon" type="solid" class="h-3 w-3 text-white" />
         </button>
         <button
           @click.prevent="destroy(id)"
           type="button"
-          class="rounded-md bg-red-500 p-2 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+          class="
+            rounded-md
+            bg-red-500
+            p-2
+            focus:outline-none
+            focus:ring-2
+            focus:ring-red-500
+            focus:ring-offset-2
+          "
         >
           <v-icon name="TrashIcon" type="solid" class="h-3 w-3 text-white" />
         </button>

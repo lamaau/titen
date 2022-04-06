@@ -15,7 +15,7 @@
     </div>
     <div class="ml-auto flex flex-row items-center space-x-2 p-4">
       <button @click.prevent="$emit('onCancel')" class="btn-red btn-ring-red">
-        Cancel
+        {{ cancelText }}
       </button>
       <button
         @click.prevent="$emit('onSubmit')"

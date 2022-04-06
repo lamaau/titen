@@ -13,7 +13,12 @@ class PostController extends Controller
 {
     public function index(): Response
     {
-        return inertia('Post::post/index')->inertable(new PostDatatable);
+        return inertia('Post::post/index')->inertable(new PostDatatable)->title(__('Manage Post'));
+    }
+
+    public function create(): Response
+    {
+        return inertia('Post::post/create')->title(__('Create Post'));
     }
 
     public function store(PostRequest $request): RedirectResponse
