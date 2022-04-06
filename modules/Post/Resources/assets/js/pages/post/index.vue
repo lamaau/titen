@@ -20,30 +20,14 @@
     <template #action="{ item: { id } }">
       <div class="flex space-x-2">
         <button
-          class="
-            rounded-md
-            bg-yellow-400
-            p-2
-            focus:outline-none
-            focus:ring-2
-            focus:ring-yellow-400
-            focus:ring-offset-2
-          "
+          class="rounded-md bg-yellow-400 p-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
         >
           <v-icon name="PencilIcon" type="solid" class="h-3 w-3 text-white" />
         </button>
         <button
           @click.prevent="destroy(id)"
           type="button"
-          class="
-            rounded-md
-            bg-red-500
-            p-2
-            focus:outline-none
-            focus:ring-2
-            focus:ring-red-500
-            focus:ring-offset-2
-          "
+          class="rounded-md bg-red-500 p-2 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
         >
           <v-icon name="TrashIcon" type="solid" class="h-3 w-3 text-white" />
         </button>

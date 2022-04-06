@@ -24,28 +24,14 @@
       <div class="flex space-x-2">
         <button
           @click.prevent="edit(id)"
-          class="
-            p-2
-            rounded-md
-            focus:ring-2
-            bg-yellow-400
-            focus:outline-none focus:ring-offset-2 focus:ring-yellow-400
-          "
+          class="rounded-md bg-yellow-400 p-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
         >
           <v-icon name="PencilIcon" type="solid" class="h-3 w-3 text-white" />
         </button>
         <button
           @click.prevent="destroy(id)"
           type="button"
-          class="
-            p-2
-            rounded-md
-            bg-red-500
-            focus:ring-2
-            focus:outline-none
-            focus:ring-offset-2
-            focus:ring-red-500
-          "
+          class="rounded-md bg-red-500 p-2 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
         >
           <v-icon name="TrashIcon" type="solid" class="h-3 w-3 text-white" />
         </button>

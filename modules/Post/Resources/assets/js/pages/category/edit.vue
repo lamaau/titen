@@ -28,7 +28,7 @@ export default {
     title: String,
     category: Object,
   },
-  data() {        
+  data() {
     return {
       form: this.$inertia.form({
         name: this.category.name,
