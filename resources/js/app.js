@@ -11,13 +11,32 @@ InertiaProgress.init({
   showSpinner: true,
 });
 
+let currentActiveModule = null;
+
 createInertiaApp({
   resolve: async (name) => {
-    // using asyncronus dynamic import
-    const page = await import(`./pages/${name}.vue`);
+    let page;
+    let parts = name.split("::");
 
-    if (page.layout === undefined && !excepts.includes(name)) {
-      page.default.layout = defaultLayout;
+    if (parts.length > 1) {
+      const [modul, paths] = parts;
+      const moduleFileName = paths.split(".").join("/");
+
+      page = await import(
+        `../../modules/${modul}/Resources/assets/js/pages/${moduleFileName}.vue`
+      );
+
+      if (page.layout == undefined && !excepts.includes(moduleFileName)) {
+        page.default.layout = defaultLayout;
+      }
+
+      currentActiveModule = modul;
+    } else {
+      page = await import(`./pages/${name}.vue`);
+
+      if (page.layout == undefined && !excepts.includes(name)) {
+        page.default.layout = defaultLayout;
+      }
     }
 
     return await page;
@@ -26,6 +45,13 @@ createInertiaApp({
   setup({ el, App, props, plugin }) {
     const app = createApp({ render: () => h(App, props) }).use(plugin);
 
+    if (currentActiveModule) {
+      const modulePlugins =
+        require(`../../modules/${currentActiveModule}/Resources/assets/js/app.js`).default;
+
+      app.use({ ...modulePlugins, ...stores });
+    }
+
     app.config.productionTip = false;
 
     // helper
@@ -33,9 +59,6 @@ createInertiaApp({
 
     // global component
     app.use(registerGlobalComponent);
-
-    // vuex stores
-    app.use(stores);
 
     app.mount(el);
     return app;

@@ -1,3 +1,3 @@
 <template>
-    <span>simple pagination</span>
+  <span>simple pagination</span>
 </template>

@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Setting\Permission;
 use Illuminate\Support\Arr;
+use Modules\User\Entities\Permission;
 
 beforeEach(function () {
     actingAsAdminRole();

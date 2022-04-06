@@ -16,7 +16,12 @@
       </svg>
     </div>
   </div> -->
-  <v-apexchart type="area" height="500" :options="chart.chartOptions" :series="chart.series" />
+  <v-apexchart
+    type="area"
+    height="500"
+    :options="chart.chartOptions"
+    :series="chart.series"
+  />
 </template>
 <script setup>
 const props = defineProps({
@@ -48,7 +53,20 @@ const chart = {
       text: "Nominal dihitung berdasarkan bulan pada tahun berjalan.",
       align: "left",
     },
-    labels: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agust", "Sep", "Okt", "Nov", "Des"],
+    labels: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "Mei",
+      "Jun",
+      "Jul",
+      "Agust",
+      "Sep",
+      "Okt",
+      "Nov",
+      "Des",
+    ],
     yaxis: {
       opposite: true,
       labels: {

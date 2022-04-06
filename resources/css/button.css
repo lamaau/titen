@@ -11,11 +11,11 @@
 }
 
 .btn-ring-red {
-  @apply focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus:outline-none;
+  @apply focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:outline-none;
 }
 
 .btn-ring-purple {
-  @apply focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 focus:outline-none;
+  @apply focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:outline-none;
 }
 
 .btn-close {

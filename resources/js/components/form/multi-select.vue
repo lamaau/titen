@@ -1,6 +1,8 @@
 <template>
   <div>
-    <label v-if="label" class="form-label mb-1 text-sm capitalize"> {{ label }} <span v-if="required" class="text-xs text-red-500">*</span> </label>
+    <label v-if="label" class="form-label mb-1 text-sm capitalize">
+      {{ label }} <span v-if="required" class="text-xs text-red-500">*</span>
+    </label>
 
     <Multiselect
       ref="selectInput"
@@ -15,7 +17,9 @@
       @select="handleSelect"
       @search-change="handleSearch"
       no-options-text="Tidak ada piilhan"
-      :class="[error ? 'border-red-500' : 'border-gray-300 dark:border-cool-gray-500']"
+      :class="[
+        error ? 'border-red-500' : 'border-gray-300 dark:border-cool-gray-500',
+      ]"
       :classes="{
         container:
           'relative p-2 leading-normal mt-2 focus:ring-0 outline-none block w-full border text-gray-500 bg-white font-sans rounded text-left appearance-none relative focus:border-indigo-400',
@@ -26,14 +30,19 @@
         optionSelected: 'text-white bg-purple-500',
         optionDisabled: 'text-gray-300 cursor-not-allowed',
         optionSelectedPointed: 'text-white bg-purple-500',
-        optionSelectedDisabled: 'text-purple-100 bg-purple-500 bg-opacity-50 cursor-not-allowed',
+        optionSelectedDisabled:
+          'text-purple-100 bg-purple-500 bg-opacity-50 cursor-not-allowed',
         noOptions: 'py-2 px-3 text-gray-600 bg-white text-left',
         noResults: 'py-2 px-3 text-gray-600 bg-white text-left',
-        singleLabelText: 'overflow-ellipsis overflow-hidden block text-gray-700 whitespace-nowrap max-w-full dark:text-cool-gray-300',
+        singleLabelText:
+          'overflow-ellipsis overflow-hidden block text-gray-700 whitespace-nowrap max-w-full dark:text-cool-gray-300',
       }"
     >
       <template #clear>
-        <span class="absolute right-3 top-[12px] cursor-pointer" @click.prevent="handleClear">
+        <span
+          class="absolute right-3 top-[12px] cursor-pointer"
+          @click.prevent="handleClear"
+        >
           <v-icon name="XIcon" type="solid" class="h-4 w-4" />
         </span>
       </template>
@@ -87,7 +96,7 @@ export default {
       default: () => false,
     },
     modelValue: {
-      type: Object
+      type: Object,
     },
   },
   emits: ["update:modelValue", "clear"],
@@ -116,7 +125,9 @@ export default {
       const input = this.$refs.selectInput.$el.getElementsByTagName("input")[0];
       input && input.focus();
 
-      let selected = this.options.find((v) => v.label.toLowerCase() == value.label.toLowerCase());
+      let selected = this.options.find(
+        (v) => v.label.toLowerCase() == value.label.toLowerCase(),
+      );
       this.selected = selected == undefined ? value : selected;
     },
     handleClear() {
@@ -136,7 +147,9 @@ export default {
           this.$emit("update:modelValue", null);
         }
 
-        const { data } = await axios.get(`/${this.url}?search=${encodeURIComponent(value)}`);
+        const { data } = await axios.get(
+          `/${this.url}?search=${encodeURIComponent(value)}`,
+        );
 
         this.options = data;
       }

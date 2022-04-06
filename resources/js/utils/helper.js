@@ -146,7 +146,14 @@ const formatDate = (date) => {
   return format(newDate, "EEEE, dd MMMM yyyy", { locale: id });
 };
 
-export { daysInMonth, formatNumber, romanToNumber, numberToRoman, shortTimestamp, formatDate };
+export {
+  daysInMonth,
+  formatNumber,
+  romanToNumber,
+  numberToRoman,
+  shortTimestamp,
+  formatDate,
+};
 
 export default {
   daysInMonth,

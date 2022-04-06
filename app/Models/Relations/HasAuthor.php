@@ -10,6 +10,15 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 trait HasAuthor
 {
+    public function getFillable(): array
+    {
+        return array_merge($this->fillable, [
+            'created_by',
+            'updated_by',
+            'deleted_by',
+        ]);
+    }
+
     public static function bootHasAuthor(): void
     {
         static::creating(function (Model $model) {

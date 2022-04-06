@@ -1,8 +1,13 @@
 <template>
   <div :class="$attrs.class">
-    <label class="form-label mb-2 text-sm capitalize" :for="id">{{ label }}</label>
+    <label class="form-label mb-2 text-sm capitalize" :for="id">{{
+      label
+    }}</label>
     <div class="relative mt-1 text-gray-700">
-      <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center rounded-tl-md rounded-bl-md bg-gray-200 px-3" :class="{ ' border border-r-0 border-indigo-400': isFocus }">
+      <div
+        class="pointer-events-none absolute inset-y-0 left-0 flex items-center rounded-tl-md rounded-bl-md bg-gray-200 px-3"
+        :class="{ ' border border-r-0 border-indigo-400': isFocus }"
+      >
         <span class="text-gray-600 dark:text-cool-gray-200"> +62 </span>
       </div>
       <input
@@ -45,7 +50,11 @@ export default {
     handleKeyPressed(evt) {
       evt = evt ? evt : window.event;
       var charCode = evt.which ? evt.which : evt.keyCode;
-      if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode !== 46) {
+      if (
+        charCode > 31 &&
+        (charCode < 48 || charCode > 57) &&
+        charCode !== 46
+      ) {
         evt.preventDefault();
       } else {
         return true;

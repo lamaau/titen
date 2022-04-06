@@ -1,7 +1,16 @@
 <template>
   <div class="p-5 text-center">
-    <div class="mx-auto flex h-24 w-24 flex-shrink-0 items-center justify-center rounded-full bg-red-200">
-      <svg id="Layer_1" x="0px" y="0px" viewBox="0 0 457.503 457.503" class="h-14 w-14" fill="red">
+    <div
+      class="mx-auto flex h-24 w-24 flex-shrink-0 items-center justify-center rounded-full bg-red-200"
+    >
+      <svg
+        id="Layer_1"
+        x="0px"
+        y="0px"
+        viewBox="0 0 457.503 457.503"
+        class="h-14 w-14"
+        fill="red"
+      >
         <path
           d="M381.575,57.067h-90.231C288.404,25.111,261.461,0,228.752,0C196.043,0,169.1,25.111,166.16,57.067H75.929
 			c-26.667,0-48.362,21.695-48.362,48.362c0,26.018,20.655,47.292,46.427,48.313v246.694c0,31.467,25.6,57.067,57.067,57.067
@@ -21,8 +30,12 @@
     </div>
   </div>
   <div class="mt-4 flex justify-center space-x-2 p-5">
-    <button @click.prevent="cancel" type="button" class="btn-close">Cancel</button>
-    <button @click.prevent="accept" class="btn-red" type="button">Delete</button>
+    <button @click.prevent="cancel" type="button" class="btn-close">
+      Cancel
+    </button>
+    <button @click.prevent="accept" class="btn-red" type="button">
+      Delete
+    </button>
   </div>
 </template>
 <script>

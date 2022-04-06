@@ -12,26 +12,19 @@ class NavigatorServiceProvider extends ServiceProvider
     {
         Nav::define(function (User $user) {
             return [
-                Nav::item(__('Menu'))->subItems(
+                Nav::item(__('Overview'))->subItems(
                     [
                         Nav::item(__('Dashboard'))
                             ->for('/dashboard')
                             ->heroicon('HomeIcon')
                             ->icon('outline'),
-                    ]
+                        Nav::item(__('Module'))
+                            ->for('/setting/module')
+                            ->heroicon('ViewGridIcon')
+                            ->icon('outline')
+                            ->when($user->isAdmin()),
+                    ],
                 ),
-                Nav::item(__('Setting'))->subItems(
-                    [
-                        Nav::item(__('User'))
-                            ->for('/setting/user')
-                            ->heroicon('UsersIcon')
-                            ->icon('outline'),
-                        Nav::item(__('Role & Permission'))
-                            ->for('/setting/role')
-                            ->heroicon('LockClosedIcon')
-                            ->icon('outline'),
-                    ]
-                )->when($user->hasRole('Admin')),
             ];
         });
     }

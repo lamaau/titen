@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Inertable\Setting;
 
-use App\Models\Setting\Permission;
 use Illuminate\Database\Eloquent\Builder;
+use Modules\User\Entities\Permission;
 use Rizkhal\Inertable\Column;
 use Rizkhal\Inertable\Inertable;
 

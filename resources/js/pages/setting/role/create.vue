@@ -1,8 +1,18 @@
 <template>
   <v-form-container title="New role" @onSubmit="submit">
     <form @submit.prevent="submit" class="flex flex-col space-y-4">
-      <v-text :required="true" label="Role Name" v-model="form.name" :error="form.errors.name" />
-      <v-select :required="true" label="Guard" v-model="form.guard" :error="form.errors.guard">
+      <v-text
+        :required="true"
+        label="Role Name"
+        v-model="form.name"
+        :error="form.errors.name"
+      />
+      <v-select
+        :required="true"
+        label="Guard"
+        v-model="form.guard"
+        :error="form.errors.guard"
+      >
         <option value="web">web</option>
         <option value="api">api</option>
       </v-select>

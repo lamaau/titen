@@ -86,4 +86,9 @@ class User extends Authenticatable
     {
         return $query->whereHas('roles', fn ($query) => $query->where($this->qualifyColumn('roles.name'), '!=', 'Admin'));
     }
+
+    public function isAdmin(): bool
+    {
+        return $this->role === 'Admin';
+    }
 }

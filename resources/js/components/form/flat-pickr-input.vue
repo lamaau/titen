@@ -1,6 +1,8 @@
 <template>
   <div>
-    <label v-if="label" class="form-label mb-2 text-sm capitalize">{{ label }}</label>
+    <label v-if="label" class="form-label mb-2 text-sm capitalize">{{
+      label
+    }}</label>
     <VueFlatpickr
       :config="config"
       v-bind="{ ...$attrs, class: null }"

@@ -1,9 +1,20 @@
 <template>
   <v-popover class="relative" v-slot="{ open }">
-    <v-popover-button class="btn-purple flex items-center space-x-2" :class="{ 'bg-purple-700': open }">
+    <v-popover-button
+      class="btn-purple flex items-center space-x-2"
+      :class="{ 'bg-purple-700': open }"
+    >
       <span v-if="text">{{ text }}</span>
-      <span v-if="pill" class="rounded-lg bg-purple-500/70 py-[1px] px-[5px]">{{ pill }}</span>
-      <v-icon v-if="icon" :name="icon" type="outline" class="h-5 w-5" aria-hidden="true" />
+      <span v-if="pill" class="rounded-lg bg-purple-500/70 py-[1px] px-[5px]">{{
+        pill
+      }}</span>
+      <v-icon
+        v-if="icon"
+        :name="icon"
+        type="outline"
+        class="h-5 w-5"
+        aria-hidden="true"
+      />
     </v-popover-button>
 
     <transition
@@ -15,7 +26,13 @@
       leave-to-class="translate-y-1 opacity-0"
     >
       <v-popover-panel
-        :class="[position == 'right' ? 'right-0' : position == 'left' ? 'left-0' : position]"
+        :class="[
+          position == 'right'
+            ? 'right-0'
+            : position == 'left'
+            ? 'left-0'
+            : position,
+        ]"
         class="absolute right-0 mt-2 min-w-[12rem] origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-cool-gray-600"
       >
         <slot />

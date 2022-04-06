@@ -1,7 +1,9 @@
 <template>
   <TransitionRoot appear :show="isOpen" as="template">
     <Dialog as="div" :initialFocus="focusRef" @close="closeModal">
-      <div class="fixed inset-0 z-10 overflow-y-auto bg-white/30 backdrop-blur-sm transition duration-100">
+      <div
+        class="fixed inset-0 z-10 overflow-y-auto bg-white/30 backdrop-blur-sm transition duration-100"
+      >
         <div class="min-h-screen px-4 text-center">
           <TransitionChild
             as="template"
@@ -15,7 +17,9 @@
             <DialogOverlay class="fixed inset-0" />
           </TransitionChild>
 
-          <span class="inline-block h-screen align-middle" aria-hidden="true"> &#8203; </span>
+          <span class="inline-block h-screen align-middle" aria-hidden="true">
+            &#8203;
+          </span>
 
           <TransitionChild
             as="template"
@@ -27,29 +31,19 @@
             leave-to="opacity-0 scale-95"
           >
             <div
-              class="
-                my-8
-                inline-block
-                w-full
-                max-w-md
-                transform
-                overflow-hidden
-                rounded-lg
-                border border-gray-200
-                bg-white
-                text-left
-                align-middle
-                shadow-xl
-                transition-all
-                dark:bg-cool-gray-800
-              "
+              class="my-8 inline-block w-full max-w-md transform overflow-hidden rounded-lg border border-gray-200 bg-white text-left align-middle shadow-xl transition-all dark:bg-cool-gray-800"
             >
               <div v-if="props.type == 'default'">
-                <DialogTitle v-if="title" as="h3" class="border-b bg-gray-50 p-4 text-xl"> {{ title }} </DialogTitle>
+                <!-- <DialogTitle v-if="title" as="h3" class="border-b bg-gray-50 p-4 text-xl"> {{ title }} </DialogTitle> -->
                 <slot />
               </div>
               <div v-if="props.type == 'destroy'">
-                <Confirm :title="props.title" :message="props.message" :accept="props.onAccept" :cancel="props.onCancel" />
+                <Confirm
+                  :title="props.title"
+                  :message="props.message"
+                  :accept="props.onAccept"
+                  :cancel="props.onCancel"
+                />
               </div>
             </div>
           </TransitionChild>
@@ -62,7 +56,13 @@
 <script setup>
 import { ref } from "vue";
 import Confirm from "~/components/modal/confirm.vue";
-import { TransitionRoot, TransitionChild, Dialog, DialogOverlay, DialogTitle } from "@headlessui/vue";
+import {
+  TransitionRoot,
+  TransitionChild,
+  Dialog,
+  DialogOverlay,
+  DialogTitle,
+} from "@headlessui/vue";
 
 const isOpen = ref(false);
 const focusRef = ref();

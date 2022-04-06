@@ -3,10 +3,17 @@
     <div class="flex flex-col space-y-4 p-4">
       <template v-for="(field, key) in fields" :key="key">
         <div class="w-64">
-          <v-multi-select :label="fields[key].name" @select="handleSelect($event, key)" v-model="models[key]" :url="fields[key].url" />
+          <v-multi-select
+            :label="fields[key].name"
+            @select="handleSelect($event, key)"
+            v-model="models[key]"
+            :url="fields[key].url"
+          />
         </div>
       </template>
-      <button class="btn-red w-full" type="button" @click.prevent="handleClear">Bersihkan</button>
+      <button class="btn-red w-full" type="button" @click.prevent="handleClear">
+        Bersihkan
+      </button>
     </div>
   </dropdown2>
 </template>
@@ -29,7 +36,10 @@ export default {
   },
   data() {
     return {
-      models: Object.keys(this.fields).reduce((ac, a) => ({ ...ac, [a]: null }), {}),
+      models: Object.keys(this.fields).reduce(
+        (ac, a) => ({ ...ac, [a]: null }),
+        {},
+      ),
       filters: [],
     };
   },
