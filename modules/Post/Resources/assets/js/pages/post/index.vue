@@ -6,24 +6,21 @@
     :columns="inertable.columns"
   >
     <template #attributes>
-      <button
-        @click.prevent="create"
-        type="button"
-        class="btn-purple btn-ring-purple"
-      >
+      <v-app-link href="/post/create" class="btn-purple btn-ring-purple">
         New Post
-      </button>
+      </v-app-link>
     </template>
     <template #created_at="{ item: { created_at } }">
       <span>{{ $helper.formatDate(created_at) }}</span>
     </template>
     <template #action="{ item: { id } }">
       <div class="flex space-x-2">
-        <button
+        <v-app-link
+          :href="`/post/${id}/edit`"
           class="rounded-md bg-yellow-400 p-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
         >
           <v-icon name="PencilIcon" type="solid" class="h-3 w-3 text-white" />
-        </button>
+        </v-app-link>
         <button
           @click.prevent="destroy(id)"
           type="button"

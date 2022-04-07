@@ -146,6 +146,18 @@ const formatDate = (date) => {
   return format(newDate, "EEEE, dd MMMM yyyy", { locale: id });
 };
 
+const convertToSlug = (Text) => {
+  return Text.toLowerCase()
+    .toString()
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w\-]+/g, "")
+    .replace(/\-\-+/g, "-")
+    .replace(/^-+/, "")
+    .replace(/-+$/, "");
+};
+
 export {
   daysInMonth,
   formatNumber,
@@ -153,6 +165,7 @@ export {
   numberToRoman,
   shortTimestamp,
   formatDate,
+  convertToSlug,
 };
 
 export default {
@@ -162,4 +175,5 @@ export default {
   numberToRoman,
   shortTimestamp,
   formatDate,
+  convertToSlug,
 };

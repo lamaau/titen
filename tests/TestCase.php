@@ -59,7 +59,7 @@ abstract class TestCase extends BaseTestCase
     {
         File::deleteDirectory($directory);
 
-        File::makeDirectory($directory);
+        // File::makeDirectory($directory);
     }
 
     public function getScheduleEventForCommand(string $commandName, Carbon $atTime = null): Collection
