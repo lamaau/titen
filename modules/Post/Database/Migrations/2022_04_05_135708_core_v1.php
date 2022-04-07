@@ -23,7 +23,10 @@ return new class extends Migration {
 
         Schema::create('posts', function (Blueprint $table) {
             $table->uuid('id')->primary();
+            $table->string('title');
             $table->string('slug')->unique();
+            $table->longText('content');
+            $table->commonFields();
         });
     }
 

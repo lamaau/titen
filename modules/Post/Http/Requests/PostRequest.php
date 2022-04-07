@@ -3,6 +3,7 @@
 namespace Modules\Post\Http\Requests;
 
 use App\Abstracts\FormRequest;
+use Illuminate\Support\Arr;
 use Illuminate\Validation\Rule;
 
 class PostRequest extends FormRequest

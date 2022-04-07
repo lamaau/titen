@@ -43,10 +43,17 @@ export default {
   methods: {
     save() {
       this.form.post(`/post`, {
-        onSuccess: () => {
-          this.form.reset();
-        },
+        onSuccess: () => this.form.reset(),
       });
+    },
+  },
+  watch: {
+    "form.title": {
+      handler: function (value) {
+        if (value) {
+          this.form.slug = this.$helper.convertToSlug(value);
+        }
+      },
     },
   },
 };

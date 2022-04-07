@@ -15,7 +15,8 @@
     </template>
     <template #action="{ item: { id } }">
       <div class="flex space-x-2">
-        <button
+        <v-app-link
+          :href="`/post/${id}/edit`"
           class="
             rounded-md
             bg-yellow-400
@@ -27,7 +28,7 @@
           "
         >
           <v-icon name="PencilIcon" type="solid" class="h-3 w-3 text-white" />
-        </button>
+        </v-app-link>
         <button
           @click.prevent="destroy(id)"
           type="button"
