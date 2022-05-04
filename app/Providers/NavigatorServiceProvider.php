@@ -18,11 +18,11 @@ class NavigatorServiceProvider extends ServiceProvider
                             ->for('/dashboard')
                             ->heroicon('HomeIcon')
                             ->icon('outline'),
-                        Nav::item(__('Module'))
-                            ->for('/setting/module')
-                            ->heroicon('ViewGridIcon')
-                            ->icon('outline')
-                            ->when($user->isAdmin()),
+                        // Nav::item(__('Module'))
+                        //     ->for('/setting/module')
+                        //     ->heroicon('ViewGridIcon')
+                        //     ->icon('outline')
+                        //     ->when($user->isAdmin()),
                     ],
                 ),
             ];

@@ -25,7 +25,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         parent::boot();
 
-        require_once module_path('Post', '/Routes/breadcrumbs.php');
+        require_once module_path('Post', '/Routes/admin/breadcrumbs.php');
     }
 
     /**
@@ -49,9 +49,8 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
-        Route::middleware('web')
-            ->namespace($this->moduleNamespace)
-            ->group(module_path('Post', '/Routes/web.php'));
+        Route::namespace($this->moduleNamespace)
+            ->group(module_path('Post', '/Routes/admin/web.php'));
     }
 
     /**
@@ -63,9 +62,9 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapApiRoutes()
     {
-        Route::prefix('api')
-            ->middleware('api')
-            ->namespace($this->moduleNamespace)
-            ->group(module_path('Post', '/Routes/api.php'));
+        Route::prefix('api')->middleware('auth:api')->group(function (): void {
+            Route::prefix('v1')->namespace($this->moduleNamespace)
+                ->group(module_path('Post', '/Routes/api/v1.php'));
+        });
     }
 }

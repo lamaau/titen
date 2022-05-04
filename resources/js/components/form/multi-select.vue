@@ -95,6 +95,13 @@ export default {
       type: Boolean,
       default: () => false,
     },
+    attributes: {
+      type: Object,
+      default: () => ({
+        value: "id",
+        label: "name",
+      }),
+    },
     modelValue: {
       type: Object,
     },
@@ -148,10 +155,17 @@ export default {
         }
 
         const { data } = await axios.get(
-          `/${this.url}?search=${encodeURIComponent(value)}`,
+          `/${this.url}?q=${encodeURIComponent(value)}`,
         );
 
-        this.options = data;
+        const options = data.data.map((v) => {
+          return {
+            value: v[this.attributes.value],
+            label: v[this.attributes.label],
+          };
+        });
+
+        this.options = options;
       }
     }, 500),
   },

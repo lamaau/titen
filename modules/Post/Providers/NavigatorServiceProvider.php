@@ -18,10 +18,6 @@ class NavigatorServiceProvider extends ServiceProvider
                             ->for('/post')
                             ->heroicon('PencilAltIcon')
                             ->icon('outline'),
-                        Nav::item(__('Tag'))
-                            ->for('/tag')
-                            ->heroicon('TagIcon')
-                            ->icon('outline'),
                         Nav::item(__('Category'))
                             ->for('/category')
                             ->heroicon('TagIcon')

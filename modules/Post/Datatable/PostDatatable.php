@@ -22,6 +22,7 @@ class PostDatatable extends Inertable
             Column::make(__('Title'), 'title')->sortable(),
             Column::make(__('Content'), 'content')->searchable(),
             Column::make(__('Created'), 'created_at')->sortable(),
+            Column::make(__('Category'), 'category.name')->sortable()->searchable(),
             Column::make(__('Author'), 'author.username')->sortable(),
             Column::action(),
         ];

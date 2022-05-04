@@ -17,5 +17,5 @@ yarn-error.log
 /.vscode
 
 # remove all
-# modules/*
-# !modules/.gitkeep
+modules/*
+!modules/.gitkeep

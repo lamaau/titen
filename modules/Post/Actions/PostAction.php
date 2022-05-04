@@ -11,7 +11,7 @@ class PostAction
     public static function create(PostRequest $request)
     {
         DB::transaction(function () use ($request) {
-            Post::create($request->validated());
+            Post::create($request->getData());
         });
     }
 

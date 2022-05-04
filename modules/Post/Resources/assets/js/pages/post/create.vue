@@ -19,6 +19,14 @@
           v-model="form.slug"
           :error="form.errors.slug"
         />
+        <v-multi-select
+          label="Category"
+          :required="true"
+          :create-option="true"
+          url="select/category"
+          v-model="form.category"
+          :error="form.errors.category"
+        />
         <v-textarea
           label="Content"
           :required="true"
@@ -36,6 +44,7 @@ export default {
       form: this.$inertia.form({
         title: null,
         slug: null,
+        category: null,
         content: null,
       }),
     };

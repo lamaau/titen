@@ -75,7 +75,7 @@ class User extends Authenticatable
 
     public function role(): Attribute
     {
-        $role = auth()->user()->roles()->pluck('name')->first();
+        $role = auth()->user()?->roles()->pluck('name')->first();
 
         return new Attribute(
             get: fn ($value) => ucfirst($role)
