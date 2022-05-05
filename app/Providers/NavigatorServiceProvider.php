@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Models\User;
 use Illuminate\Support\ServiceProvider;
+use Modules\User\Entities\User;
 use Nedwors\Navigator\Facades\Nav;
 
 class NavigatorServiceProvider extends ServiceProvider
@@ -18,11 +18,6 @@ class NavigatorServiceProvider extends ServiceProvider
                             ->for('/dashboard')
                             ->heroicon('HomeIcon')
                             ->icon('outline'),
-                        // Nav::item(__('Module'))
-                        //     ->for('/setting/module')
-                        //     ->heroicon('ViewGridIcon')
-                        //     ->icon('outline')
-                        //     ->when($user->isAdmin()),
                     ],
                 ),
             ];
