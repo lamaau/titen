@@ -3,6 +3,6 @@
 /*
  * @OA\Info(
  *    title="Titen API Documentation",
- *    version="1.0.0",
+ *    version="1.0.0"
  * )
  */

@@ -18,6 +18,7 @@
     "joshbrw/laravel-module-installer": "^2.0",
     "laravel-notification-channels/telegram": "^2.0",
     "laravel/framework": "^9.0",
+    "laravel/passport": "^10.4",
     "laravel/tinker": "^2.5",
     "league/flysystem-aws-s3-v3": "^3.0.1",
     "maatwebsite/excel": "^3.1",
