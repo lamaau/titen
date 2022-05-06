@@ -28,7 +28,8 @@
     "spatie/flysystem-dropbox": "^2.0",
     "spatie/laravel-backup": "^8.1.1",
     "spatie/laravel-permission": "^5.5.1",
-    "tabuna/breadcrumbs": "^3.0.0"
+    "tabuna/breadcrumbs": "^3.0.0",
+    "timacdonald/json-api": "^0.2.1"
   },
   "require-dev": {
     "barryvdh/laravel-debugbar": "^3.6",

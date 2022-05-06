@@ -2,17 +2,37 @@
     "openapi": "3.0.0",
     "info": {
         "title": "Titen API Documentation",
-        "version": "1.0"
+        "description": "Titen API Documentation",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "email": "support@titen.org"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
     },
     "paths": {
-        "/api/v1/category": {
+        "/api/v1/categories": {
             "get": {
                 "tags": [
-                    "category"
+                    "Category"
                 ],
-                "summary": "Index Category",
+                "summary": "List of Category",
                 "description": "Returns list of Category",
-                "operationId": "indexCategory",
+                "operationId": "readAllCategory",
+                "parameters": [
+                    {
+                        "name": "include",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "author"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "Successful operation"
@@ -29,14 +49,34 @@
                 }
             }
         },
-        "/api/v1/post": {
+        "/api/v1/categories/{id}?include=posts": {
             "get": {
                 "tags": [
-                    "post"
+                    "Category"
                 ],
-                "summary": "Index Post",
-                "description": "Returns list of Post",
-                "operationId": "indexPost",
+                "summary": "Get Category based on id",
+                "description": "Returns Category based on id",
+                "operationId": "readCategoryById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "f6f16655-588b-49c5-b620-d2791a6c925c"
+                    },
+                    {
+                        "name": "include",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "posts"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "Successful operation"
@@ -49,6 +89,103 @@
                     },
                     "402": {
                         "description": "Payment Required"
+                    }
+                }
+            }
+        },
+        "/api/v1/posts": {
+            "get": {
+                "tags": [
+                    "Post"
+                ],
+                "summary": "List of Post",
+                "description": "Returns list of Post",
+                "operationId": "readAllPost",
+                "parameters": [
+                    {
+                        "name": "include",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "author"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "402": {
+                        "description": "Payment Required"
+                    }
+                }
+            }
+        },
+        "/api/v1/posts/{id}?include=category": {
+            "get": {
+                "tags": [
+                    "Post"
+                ],
+                "summary": "Get Post based on id",
+                "description": "Returns Post based on id",
+                "operationId": "readPostById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "7fe911d0-0473-4b47-8fb3-97dccbd47e19"
+                    },
+                    {
+                        "name": "include",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "category"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "402": {
+                        "description": "Payment Required"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "passport": {
+                "type": "oauth2",
+                "description": "Laravel passport oauth2 security.",
+                "in": "header",
+                "scheme": "https",
+                "flows": {
+                    "password": {
+                        "authorizationUrl": "http://titen.test//oauth/authorize",
+                        "tokenUrl": "http://titen.test//oauth/token",
+                        "refreshUrl": "http://titen.test//token/refresh",
+                        "scopes": []
                     }
                 }
             }
