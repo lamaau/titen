@@ -103,7 +103,7 @@
             </div>
           </header>
 
-          <div class="p-6">
+          <div class="py-4">
             <!-- slot -->
             <slot />
           </div>

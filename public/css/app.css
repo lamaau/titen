@@ -1298,6 +1298,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.px-10{
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}.py-24{
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }.pl-3\.5{
   padding-left: 0.875rem;
 }.pl-3{
@@ -1355,6 +1358,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-transform: uppercase;
 }.capitalize{
   text-transform: capitalize;
+}.italic{
+  font-style: italic;
 }.leading-none{
   line-height: 1;
 }.leading-normal{
@@ -1420,6 +1425,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(243 232 255 / var(--tw-text-opacity));
 }.text-opacity-90{
   --tw-text-opacity: 0.9;
+}.underline{
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }.antialiased{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1629,6 +1637,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   }.lg\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
+  }.lg\:pl-\[12rem\]{
+    padding-left: 12rem;
   }.lg\:pl-\[14rem\]{
     padding-left: 14rem;
   }

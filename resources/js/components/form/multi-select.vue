@@ -95,13 +95,6 @@ export default {
       type: Boolean,
       default: () => false,
     },
-    attributes: {
-      type: Object,
-      default: () => ({
-        value: "id",
-        label: "name",
-      }),
-    },
     modelValue: {
       type: Object,
     },
@@ -158,10 +151,11 @@ export default {
           `/${this.url}?q=${encodeURIComponent(value)}`,
         );
 
+        //will be changed for dynamicly api response
         const options = data.data.map((v) => {
           return {
-            value: v[this.attributes.value],
-            label: v[this.attributes.label],
+            value: v.id,
+            label: v.attributes.name,
           };
         });
 

@@ -22,10 +22,6 @@ import "vue-toast-notification/dist/theme-sugar.css";
 // modal
 import VueModal from "~/plugins/modal";
 
-// quill editor
-import { QuillEditor } from "@vueup/vue-quill";
-import "@vueup/vue-quill/dist/vue-quill.snow.css";
-
 export default {
   install: (app, options) => {
     // inertia
@@ -60,7 +56,10 @@ export default {
     );
 
     // form
-    app.component("v-quill-editor", QuillEditor);
+    app.component(
+      "v-editor",
+      require("~/components/form/tinymce-editor").default,
+    );
 
     app.component(
       "v-form-container",
