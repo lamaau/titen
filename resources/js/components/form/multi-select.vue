@@ -18,7 +18,7 @@
       @search-change="handleSearch"
       no-options-text="Tidak ada piilhan"
       :class="[
-        error ? 'border-red-500' : 'border-gray-300 dark:border-cool-gray-500',
+        error ? 'border-red-500' : 'dark:border-cool-gray-500 border-gray-300',
       ]"
       :classes="{
         container:

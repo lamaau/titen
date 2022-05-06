@@ -1,15 +1,15 @@
 <template>
   <div
-    class="border border-gray-200 shadow dark:border-cool-gray-700 sm:rounded-lg"
+    class="dark:border-cool-gray-700 border border-gray-200 shadow sm:rounded-lg"
   >
     <div class="p-4" v-if="title">
-      <h2 class="text-xl font-bold text-gray-700 dark:text-cool-gray-300">
+      <h2 class="dark:text-cool-gray-300 text-xl font-bold text-gray-700">
         {{ title }}
       </h2>
     </div>
 
     <div
-      class="flex items-center border-t border-dashed bg-white p-5 dark:border-cool-gray-700 dark:bg-cool-gray-600"
+      class="dark:border-cool-gray-700 dark:bg-cool-gray-600 flex items-center border-t border-dashed bg-white p-5"
       :class="[$slots['attributes'] ? 'justify-between' : 'justify-end']"
     >
       <div class="flex items-center space-x-2">
@@ -23,7 +23,7 @@
         <select
           v-model="params.perpage"
           v-if="allowPerPage"
-          class="form-select text-sm dark:border-cool-gray-500 dark:bg-cool-gray-700 dark:text-cool-gray-300"
+          class="dark:border-cool-gray-500 dark:bg-cool-gray-700 dark:text-cool-gray-300 form-select text-sm"
         >
           <option value="15">15</option>
           <option value="30">30</option>
@@ -61,13 +61,13 @@
       </div>
     </div>
 
-    <div class="overflow-auto border-b border-dashed dark:border-cool-gray-700">
+    <div class="dark:border-cool-gray-700 overflow-auto border-b border-dashed">
       <div
-        class="flex space-x-6 border-t border-dashed py-2 px-4 dark:border-cool-gray-700"
+        class="dark:border-cool-gray-700 flex space-x-6 border-t border-dashed py-2 px-4"
         v-if="params.column && params.direction"
       >
         <div class="flex items-center space-x-2">
-          <p class="text-sm dark:text-cool-gray-200">Penyortiran Diterapkan:</p>
+          <p class="dark:text-cool-gray-200 text-sm">Penyortiran Diterapkan:</p>
           <span
             class="flex items-center rounded-md bg-purple-500 text-sm text-white"
           >
@@ -86,9 +86,9 @@
       </div>
 
       <table
-        class="min-w-full divide-y divide-gray-200 dark:divide-cool-gray-500"
+        class="dark:divide-cool-gray-500 min-w-full divide-y divide-gray-200"
       >
-        <thead class="border-t bg-gray-50 dark:border-cool-gray-500">
+        <thead class="dark:border-cool-gray-500 border-t bg-gray-50">
           <tr>
             <th v-if="allowCheckbox" class="table-heading-cell">
               <input
@@ -138,13 +138,13 @@
         </thead>
         <tbody
           v-if="data.data.length"
-          class="divide-y divide-gray-200 bg-white dark:divide-cool-gray-700"
+          class="dark:divide-cool-gray-700 divide-y divide-gray-200 bg-white"
         >
           <template v-if="!$slots['body']">
             <tr
               v-for="(item, index) in data.data"
               :key="index"
-              class="hover:bg-gray-100 dark:text-cool-gray-100"
+              class="dark:text-cool-gray-100 hover:bg-gray-100"
             >
               <td v-if="allowCheckbox" class="table-body-cell">
                 <input
@@ -177,7 +177,7 @@
           <tr>
             <td
               :colspan="columns.filter((c) => c.blank === false).length"
-              class="bg-white py-8 text-center text-gray-400 dark:bg-cool-gray-600 dark:text-cool-gray-200"
+              class="dark:bg-cool-gray-600 dark:text-cool-gray-200 bg-white py-8 text-center text-gray-400"
             >
               <div class="flex flex-col items-center justify-center space-y-1">
                 <v-icon name="InboxIcon" type="outline" class="h-8 w-8" />
@@ -189,7 +189,7 @@
       </table>
     </div>
     <div class="flex items-center justify-between p-4">
-      <div class="text-sm text-cool-gray-800 dark:text-cool-gray-200">
+      <div class="text-cool-gray-800 dark:text-cool-gray-200 text-sm">
         Show <span class="font-bold">{{ data.from ?? 0 }}</span> to
         <span class="font-bold">{{ data.to ?? 0 }}</span> from
         <span class="font-bold">{{ data.total }}</span>

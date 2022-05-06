@@ -7,7 +7,7 @@
       :config="config"
       v-bind="{ ...$attrs, class: null }"
       :class="{ 'border-red-500': error }"
-      class="form-input dark:border-cool-gray-500 dark:bg-cool-gray-700 dark:text-cool-gray-300"
+      class="dark:border-cool-gray-500 dark:bg-cool-gray-700 dark:text-cool-gray-300 form-input"
     />
     <div v-if="error" class="form-error">{{ error }}</div>
   </div>

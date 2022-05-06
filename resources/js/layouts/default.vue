@@ -3,14 +3,14 @@
 
   <div :class="{ dark: dark }">
     <div
-      class="flex min-h-screen w-full bg-gray-50 text-gray-700 dark:bg-cool-gray-600"
+      class="dark:bg-cool-gray-600 flex min-h-screen w-full bg-gray-50 text-gray-700"
     >
       <aside
         ref="sidebar"
         class="fixed inset-y-0 left-0 z-20 hidden h-screen w-[14rem] translate-x-0 flex-col overflow-hidden shadow-2xl duration-300 lg:z-0 lg:flex lg:translate-x-0"
       >
         <header
-          class="flex h-[4rem] shrink-0 items-center border-b px-6 dark:border-none dark:bg-cool-gray-800"
+          class="dark:bg-cool-gray-800 flex h-[4rem] shrink-0 items-center border-b px-6 dark:border-none"
         >
           <v-app-link
             class="mx-auto text-xl font-bold tracking-tight dark:text-gray-200"
@@ -51,7 +51,7 @@
       <div class="flex w-screen flex-1 space-y-6 lg:pl-[14rem]">
         <div class="w-full flex-1">
           <header
-            class="flex h-[4rem] w-full shrink-0 items-center border-b dark:border-none dark:bg-cool-gray-700"
+            class="dark:bg-cool-gray-700 flex h-[4rem] w-full shrink-0 items-center border-b dark:border-none"
           >
             <div class="flex w-full items-center px-2 sm:px-4 md:px-6 lg:px-8">
               <button
@@ -88,7 +88,7 @@
                     <v-icon
                       v-if="!dark"
                       name="MoonIcon"
-                      class="h-6 w-6 text-cool-gray-600"
+                      class="text-cool-gray-600 h-6 w-6"
                       type="outline"
                     />
                     <v-icon

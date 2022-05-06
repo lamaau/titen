@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex-1 overflow-y-auto bg-purple-600 py-6 dark:bg-cool-gray-700">
+  <nav class="dark:bg-cool-gray-700 flex-1 overflow-y-auto bg-purple-600 py-6">
     <template
       class="space-y-2 px-6"
       v-for="(baseNav, index) in navigators"
@@ -21,9 +21,9 @@
             <v-app-link
               :href="nav.url"
               :class="{
-                'bg-purple-700 dark:bg-cool-gray-800': isUrl(nav.url.slice(1)),
+                'dark:bg-cool-gray-800 bg-purple-700': isUrl(nav.url.slice(1)),
               }"
-              class="flex items-center gap-2 rounded-lg py-2 px-2 font-medium text-white transition hover:bg-purple-700 focus:bg-purple-700 focus:outline-none dark:text-cool-gray-200 dark:hover:bg-cool-gray-800 dark:focus:bg-cool-gray-800"
+              class="dark:text-cool-gray-200 dark:hover:bg-cool-gray-800 dark:focus:bg-cool-gray-800 flex items-center gap-2 rounded-lg py-2 px-2 font-medium text-white transition hover:bg-purple-700 focus:bg-purple-700 focus:outline-none"
             >
               <v-icon :name="nav.heroicon" :type="nav.icon" class="h-4 w-4" />
               <span class="text-sm"> {{ nav.name }} </span>

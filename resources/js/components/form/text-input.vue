@@ -11,7 +11,7 @@
       :class="{ error: error }"
       v-bind="{ ...$attrs, class: null }"
       @input="$emit('update:modelValue', $event.target.value)"
-      class="form-input dark:border-cool-gray-500 dark:bg-cool-gray-700 dark:text-cool-gray-300"
+      class="dark:border-cool-gray-500 dark:bg-cool-gray-700 dark:text-cool-gray-300 form-input"
     />
     <div v-if="error" class="form-error">{{ error }}</div>
   </div>

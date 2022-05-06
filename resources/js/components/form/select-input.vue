@@ -8,7 +8,7 @@
       ref="input"
       v-model="selected"
       v-bind="{ ...$attrs, class: null }"
-      class="form-select dark:border-cool-gray-500 dark:bg-cool-gray-700 dark:text-cool-gray-300"
+      class="dark:border-cool-gray-500 dark:bg-cool-gray-700 dark:text-cool-gray-300 form-select"
       :class="{ error: error }"
     >
       <slot />

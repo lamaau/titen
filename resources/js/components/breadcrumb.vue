@@ -4,12 +4,12 @@
       <li class="flex items-center">
         <v-app-link
           href="/dashboard"
-          class="text-gray-800 dark:text-cool-gray-300"
+          class="dark:text-cool-gray-300 text-gray-800"
           >Dashboard</v-app-link
         >
         <svg
           v-if="items.length"
-          class="m-0 h-6 w-6 text-gray-300 dark:text-cool-gray-300"
+          class="dark:text-cool-gray-300 m-0 h-6 w-6 text-gray-300"
           viewBox="0 0 21 21"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -27,14 +27,14 @@
         v-for="(item, index) in items"
         :key="index"
         :class="{
-          'flex items-center text-gray-500 dark:text-cool-gray-200':
+          'dark:text-cool-gray-200 flex items-center text-gray-500':
             !isLast(index),
         }"
       >
         <v-app-link
           v-if="!isLast(index)"
           :href="item.url"
-          class="text-gray-500 dark:text-cool-gray-200"
+          class="dark:text-cool-gray-200 text-gray-500"
         >
           {{ item.title }}
         </v-app-link>
@@ -42,7 +42,7 @@
         <v-app-link
           v-else
           href="#"
-          class="text-gray-500 dark:text-cool-gray-200"
+          class="dark:text-cool-gray-200 text-gray-500"
         >
           {{ item.title }}
         </v-app-link>

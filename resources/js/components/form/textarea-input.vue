@@ -2,7 +2,7 @@
   <div :class="$attrs.class">
     <label
       v-if="label"
-      class="form-label mb-1 text-sm capitalize dark:text-cool-gray-200"
+      class="form-label dark:text-cool-gray-200 mb-1 text-sm capitalize"
       :for="id"
     >
       {{ label }} <span v-if="required" class="text-xs text-red-500">*</span>
@@ -15,7 +15,7 @@
       :class="{ error: error }"
       v-bind="{ ...$attrs, class: null }"
       @input="$emit('update:modelValue', $event.target.value)"
-      class="form-input dark:border-cool-gray-500 dark:bg-cool-gray-700 dark:text-cool-gray-300"
+      class="dark:border-cool-gray-500 dark:bg-cool-gray-700 dark:text-cool-gray-300 form-input"
     />
     <div v-if="error" class="form-error">{{ error }}</div>
   </div>
