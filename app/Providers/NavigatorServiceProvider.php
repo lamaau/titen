@@ -20,7 +20,7 @@ class NavigatorServiceProvider extends ServiceProvider
                             ->icon('outline'),
 
                         Nav::item(__('Api Docs'))
-                            ->for('/api-docs')
+                            ->for('/api/documentation')
                             ->heroicon('DocumentTextIcon')
                             ->icon('outline'),
                     ],

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5760caf99a9da8ce5ca89b6996849a83",
+    "content-hash": "51b35c9530959dcbeb7a44c21ed67e3a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -114,16 +114,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.222.3",
+            "version": "3.222.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "52b493b7b27de55e300afd26eff0be58d3689033"
+                "reference": "17713594c2c7971424c02bd5048aa996fe442264"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/52b493b7b27de55e300afd26eff0be58d3689033",
-                "reference": "52b493b7b27de55e300afd26eff0be58d3689033",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/17713594c2c7971424c02bd5048aa996fe442264",
+                "reference": "17713594c2c7971424c02bd5048aa996fe442264",
                 "shasum": ""
             },
             "require": {
@@ -199,9 +199,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.222.3"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.222.6"
             },
-            "time": "2022-05-02T18:16:06+00:00"
+            "time": "2022-05-05T18:42:07+00:00"
         },
         {
             "name": "brick/math",
@@ -2352,16 +2352,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.10.1",
+            "version": "v9.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "93414b1c7c0a56081d96c060bb850ac192d3d323"
+                "reference": "598a8c84d452a66b90a3213b1d67189cc726c728"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/93414b1c7c0a56081d96c060bb850ac192d3d323",
-                "reference": "93414b1c7c0a56081d96c060bb850ac192d3d323",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/598a8c84d452a66b90a3213b1d67189cc726c728",
+                "reference": "598a8c84d452a66b90a3213b1d67189cc726c728",
                 "shasum": ""
             },
             "require": {
@@ -2527,7 +2527,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-04-28T13:18:25+00:00"
+            "time": "2022-05-03T14:47:20+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -2846,16 +2846,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.0.18",
+            "version": "3.0.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "c8e137e594948240b03372e012344b07c61b9193"
+                "reference": "670df21225d68d165a8df38587ac3f41caf608f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/c8e137e594948240b03372e012344b07c61b9193",
-                "reference": "c8e137e594948240b03372e012344b07c61b9193",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/670df21225d68d165a8df38587ac3f41caf608f8",
+                "reference": "670df21225d68d165a8df38587ac3f41caf608f8",
                 "shasum": ""
             },
             "require": {
@@ -2916,7 +2916,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.0.18"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.0.19"
             },
             "funding": [
                 {
@@ -2932,7 +2932,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-25T18:55:04+00:00"
+            "time": "2022-05-03T21:19:02+00:00"
         },
         {
             "name": "league/flysystem-aws-s3-v3",
@@ -3590,16 +3590,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.57.0",
+            "version": "2.58.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "4a54375c21eea4811dbd1149fe6b246517554e78"
+                "reference": "97a34af22bde8d0ac20ab34b29d7bfe360902055"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/4a54375c21eea4811dbd1149fe6b246517554e78",
-                "reference": "4a54375c21eea4811dbd1149fe6b246517554e78",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/97a34af22bde8d0ac20ab34b29d7bfe360902055",
+                "reference": "97a34af22bde8d0ac20ab34b29d7bfe360902055",
                 "shasum": ""
             },
             "require": {
@@ -3617,7 +3617,8 @@
                 "phpmd/phpmd": "^2.9",
                 "phpstan/extension-installer": "^1.0",
                 "phpstan/phpstan": "^0.12.54 || ^1.0",
-                "phpunit/phpunit": "^7.5.20 || ^8.5.14",
+                "phpunit/php-file-iterator": "^2.0.5",
+                "phpunit/phpunit": "^7.5.20 || ^8.5.23",
                 "squizlabs/php_codesniffer": "^3.4"
             },
             "bin": [
@@ -3682,7 +3683,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-02-13T18:13:33+00:00"
+            "time": "2022-04-25T19:31:17+00:00"
         },
         {
             "name": "nette/schema",
@@ -4610,16 +4611,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.11.2",
+            "version": "v0.11.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "7f7da640d68b9c9fec819caae7c744a213df6514"
+                "reference": "6833626ee48ef9bcc8aca8f9f166760441c12573"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/7f7da640d68b9c9fec819caae7c744a213df6514",
-                "reference": "7f7da640d68b9c9fec819caae7c744a213df6514",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/6833626ee48ef9bcc8aca8f9f166760441c12573",
+                "reference": "6833626ee48ef9bcc8aca8f9f166760441c12573",
                 "shasum": ""
             },
             "require": {
@@ -4634,15 +4635,13 @@
                 "symfony/console": "4.4.37 || 5.3.14 || 5.3.15 || 5.4.3 || 5.4.4 || 6.0.3 || 6.0.4"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.2",
-                "hoa/console": "3.17.05.02"
+                "bamarni/composer-bin-plugin": "^1.2"
             },
             "suggest": {
                 "ext-pcntl": "Enabling the PCNTL extension makes PsySH a lot happier :)",
                 "ext-pdo-sqlite": "The doc command requires SQLite to work.",
                 "ext-posix": "If you have PCNTL, you'll want the POSIX extension as well.",
-                "ext-readline": "Enables support for arrow-key history navigation, and showing and manipulating command history.",
-                "hoa/console": "A pure PHP readline implementation. You'll want this if your PHP install doesn't already support readline or libedit."
+                "ext-readline": "Enables support for arrow-key history navigation, and showing and manipulating command history."
             },
             "bin": [
                 "bin/psysh"
@@ -4682,9 +4681,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.11.2"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.11.3"
             },
-            "time": "2022-02-28T15:28:54+00:00"
+            "time": "2022-05-05T02:19:43+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -5331,16 +5330,16 @@
         },
         {
             "name": "spatie/laravel-permission",
-            "version": "5.5.2",
+            "version": "5.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-permission.git",
-                "reference": "eb838cd2c539d1c97f8c997e67479cb68c2d0e36"
+                "reference": "4e3ad0aed6e3a8a4b5df9424aa0a721902bc7841"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/eb838cd2c539d1c97f8c997e67479cb68c2d0e36",
-                "reference": "eb838cd2c539d1c97f8c997e67479cb68c2d0e36",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/4e3ad0aed6e3a8a4b5df9424aa0a721902bc7841",
+                "reference": "4e3ad0aed6e3a8a4b5df9424aa0a721902bc7841",
                 "shasum": ""
             },
             "require": {
@@ -5401,7 +5400,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-permission/issues",
-                "source": "https://github.com/spatie/laravel-permission/tree/5.5.2"
+                "source": "https://github.com/spatie/laravel-permission/tree/5.5.3"
             },
             "funding": [
                 {
@@ -5409,7 +5408,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-09T10:21:20+00:00"
+            "time": "2022-05-05T21:50:47+00:00"
         },
         {
             "name": "spatie/laravel-signal-aware-command",
@@ -5547,16 +5546,16 @@
         },
         {
             "name": "swagger-api/swagger-ui",
-            "version": "v4.10.3",
+            "version": "v4.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swagger-api/swagger-ui.git",
-                "reference": "7260f967ec53c8be13ffe0dbe3107bbc6a3766aa"
+                "reference": "2e471949f26e1a52a27acbd27eef7cd1aaeab45d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/7260f967ec53c8be13ffe0dbe3107bbc6a3766aa",
-                "reference": "7260f967ec53c8be13ffe0dbe3107bbc6a3766aa",
+                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/2e471949f26e1a52a27acbd27eef7cd1aaeab45d",
+                "reference": "2e471949f26e1a52a27acbd27eef7cd1aaeab45d",
                 "shasum": ""
             },
             "type": "library",
@@ -5602,9 +5601,9 @@
             ],
             "support": {
                 "issues": "https://github.com/swagger-api/swagger-ui/issues",
-                "source": "https://github.com/swagger-api/swagger-ui/tree/v4.10.3"
+                "source": "https://github.com/swagger-api/swagger-ui/tree/v4.11.0"
             },
-            "time": "2022-04-01T22:06:17+00:00"
+            "time": "2022-05-05T17:48:04+00:00"
         },
         {
             "name": "symfony/console",
@@ -8304,16 +8303,16 @@
         },
         {
             "name": "zircote/swagger-php",
-            "version": "4.3.0",
+            "version": "4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zircote/swagger-php.git",
-                "reference": "24b23371ee962ac201fac33292034ae099c8d4a0"
+                "reference": "3eb4e8193b74373251edc1f614f9fe5401a28c0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zircote/swagger-php/zipball/24b23371ee962ac201fac33292034ae099c8d4a0",
-                "reference": "24b23371ee962ac201fac33292034ae099c8d4a0",
+                "url": "https://api.github.com/repos/zircote/swagger-php/zipball/3eb4e8193b74373251edc1f614f9fe5401a28c0c",
+                "reference": "3eb4e8193b74373251edc1f614f9fe5401a28c0c",
                 "shasum": ""
             },
             "require": {
@@ -8327,7 +8326,9 @@
             "require-dev": {
                 "composer/package-versions-deprecated": "^1.11",
                 "friendsofphp/php-cs-fixer": "^2.17 || ^3.0",
-                "phpunit/phpunit": ">=8"
+                "phpstan/phpstan": "^1.6",
+                "phpunit/phpunit": ">=8",
+                "vimeo/psalm": "^4.23"
             },
             "bin": [
                 "bin/openapi"
@@ -8373,9 +8374,9 @@
             ],
             "support": {
                 "issues": "https://github.com/zircote/swagger-php/issues",
-                "source": "https://github.com/zircote/swagger-php/tree/4.3.0"
+                "source": "https://github.com/zircote/swagger-php/tree/4.4.0"
             },
-            "time": "2022-04-17T01:42:30+00:00"
+            "time": "2022-05-05T20:23:51+00:00"
         }
     ],
     "packages-dev": [
@@ -8934,16 +8935,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.14.0",
+            "version": "v1.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "453c66fde4109eb49e12299ffe3bf0d667983447"
+                "reference": "9a7348dedfccc894718a21f71c09d669747e3f33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/453c66fde4109eb49e12299ffe3bf0d667983447",
-                "reference": "453c66fde4109eb49e12299ffe3bf0d667983447",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/9a7348dedfccc894718a21f71c09d669747e3f33",
+                "reference": "9a7348dedfccc894718a21f71c09d669747e3f33",
                 "shasum": ""
             },
             "require": {
@@ -8990,7 +8991,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2022-04-27T13:10:22+00:00"
+            "time": "2022-05-02T13:58:40+00:00"
         },
         {
             "name": "maximebf/debugbar",
@@ -11555,16 +11556,16 @@
         },
         {
             "name": "spatie/laravel-ignition",
-            "version": "1.2.2",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-ignition.git",
-                "reference": "924d1ae878874ad0bb49f63b69a9af759a34ee78"
+                "reference": "51e5daaa7e43c154fe57f1ddfbba862f9fe57646"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/924d1ae878874ad0bb49f63b69a9af759a34ee78",
-                "reference": "924d1ae878874ad0bb49f63b69a9af759a34ee78",
+                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/51e5daaa7e43c154fe57f1ddfbba862f9fe57646",
+                "reference": "51e5daaa7e43c154fe57f1ddfbba862f9fe57646",
                 "shasum": ""
             },
             "require": {
@@ -11641,7 +11642,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-04-14T18:04:51+00:00"
+            "time": "2022-05-05T15:53:24+00:00"
         },
         {
             "name": "symfony/debug",

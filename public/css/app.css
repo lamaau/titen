@@ -890,8 +890,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1.5rem;
 }.mt-10{
   margin-top: 2.5rem;
-}.mb-\[200px\]{
-  margin-bottom: 200px;
 }.mb-\[100px\]{
   margin-bottom: 100px;
 }.block{
@@ -1293,8 +1291,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 2.5rem;
 }.pb-4{
   padding-bottom: 1rem;
-}.pb-\[200px\]{
-  padding-bottom: 200px;
 }.text-left{
   text-align: left;
 }.text-center{
@@ -1336,8 +1332,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-transform: uppercase;
 }.capitalize{
   text-transform: capitalize;
-}.italic{
-  font-style: italic;
 }.leading-none{
   line-height: 1;
 }.leading-normal{
