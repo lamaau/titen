@@ -8,7 +8,15 @@
       <template v-for="(secondNav, index2) in baseNav" :key="index2">
         <p
           v-if="secondNav.subItems.length"
-          class="px-4 py-2 text-xs font-bold uppercase tracking-wider text-gray-50"
+          class="
+            px-4
+            py-2
+            text-xs
+            font-bold
+            uppercase
+            tracking-wider
+            text-gray-50
+          "
         >
           {{ secondNav.name }}
         </p>
@@ -19,15 +27,20 @@
         >
           <li class="my-[8px]">
             <v-app-link
+              v-if="nav.url != '/api/documentation'"
               :href="nav.url"
               :class="{
                 'dark:bg-cool-gray-800 bg-purple-700': isUrl(nav.url.slice(1)),
               }"
-              class="dark:text-cool-gray-200 dark:hover:bg-cool-gray-800 dark:focus:bg-cool-gray-800 flex items-center gap-2 rounded-lg py-2 px-2 font-medium text-white transition hover:bg-purple-700 focus:bg-purple-700 focus:outline-none"
+              class="navigation-link"
             >
               <v-icon :name="nav.heroicon" :type="nav.icon" class="h-4 w-4" />
               <span class="text-sm"> {{ nav.name }} </span>
             </v-app-link>
+            <a :href="nav.url" target="blank" v-else class="navigation-link">
+              <v-icon :name="nav.heroicon" :type="nav.icon" class="h-4 w-4" />
+              <span class="text-sm"> {{ nav.name }} </span>
+            </a>
           </li>
         </ul>
       </template>

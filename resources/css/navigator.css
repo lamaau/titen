@@ -1,6 +1,15 @@
 @layer components {
-    .menu {
-        @apply flex items-center gap-3 px-3 py-2 rounded-lg font-medium transition hover:bg-indigo-500 focus:bg-indigo-500;
+    .navigation-link {
+        @apply flex
+        items-center
+        gap-2
+        rounded-lg
+        py-2
+        px-2
+        font-medium
+        text-white
+        transition
+        hover:bg-purple-700
+        focus:bg-purple-700 focus:outline-none;
     }
-    
 }
