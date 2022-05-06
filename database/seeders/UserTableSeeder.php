@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use Modules\User\Entities\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Modules\User\Entities\User;
 use Spatie\Permission\Models\Role;
 
 class UserTableSeeder extends Seeder
