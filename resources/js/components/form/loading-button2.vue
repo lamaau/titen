@@ -1,7 +1,7 @@
 <template>
   <button
     :disabled="loading"
-    class="bg-cyan-600 hover:bg-cyan-700 focus:ring-cyan-200 flex w-full items-center rounded-lg px-5 py-2 text-center text-base font-medium text-white focus:ring-4 disabled:bg-opacity-50 sm:w-auto"
+    class="bg-purple-600 hover:bg-purple-700 focus:ring-purple-200 flex w-full items-center rounded-lg px-5 py-2 text-center text-base font-medium text-white focus:ring-4 disabled:bg-opacity-50 sm:w-auto"
   >
     <span v-if="loading" class="mr-3 h-4 w-4">
       <svg

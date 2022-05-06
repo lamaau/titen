@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\User;
+use Modules\User\Entities\User;
 use function Pest\Laravel\actingAs;
 
 /*

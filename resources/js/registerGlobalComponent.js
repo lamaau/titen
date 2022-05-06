@@ -19,7 +19,12 @@ import VueApexCharts from "vue3-apexcharts";
 import VueToast from "vue-toast-notification";
 import "vue-toast-notification/dist/theme-sugar.css";
 
+// modal
 import VueModal from "~/plugins/modal";
+
+// quill editor
+import { QuillEditor } from "@vueup/vue-quill";
+import "@vueup/vue-quill/dist/vue-quill.snow.css";
 
 export default {
   install: (app, options) => {
@@ -55,6 +60,8 @@ export default {
     );
 
     // form
+    app.component("v-quill-editor", QuillEditor);
+
     app.component(
       "v-form-container",
       require("~/components/form/form-container.vue").default,

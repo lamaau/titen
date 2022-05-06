@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\User;
+use Modules\User\Entities\User;
 
 it('ensure user can see login page', function () {
     $this->get('/auth/login')->assertStatus(200);

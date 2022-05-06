@@ -14,7 +14,7 @@ class NavigatorServiceProvider extends ServiceProvider
             return [
                 Nav::item(__('Overview'))->subItems(
                     [
-                        Nav::item(__('Dashboard'))
+                        Nav::item(__('Beranda'))
                             ->for('/dashboard')
                             ->heroicon('HomeIcon')
                             ->icon('outline'),
