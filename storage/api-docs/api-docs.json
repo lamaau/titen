@@ -24,13 +24,13 @@
                 "operationId": "readAllCategory",
                 "parameters": [
                     {
-                        "name": "include",
+                        "name": "filter[name]",
                         "in": "query",
                         "required": false,
                         "schema": {
                             "type": "string"
                         },
-                        "example": "author"
+                        "example": "laravel"
                     }
                 ],
                 "responses": {
