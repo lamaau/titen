@@ -19,3 +19,6 @@ yarn-error.log
 # remove all
 modules/*
 !modules/.gitkeep
+!modules/Core
+!modules/Post
+!modules/User
