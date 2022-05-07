@@ -142,9 +142,56 @@
                     }
                 }
             }
+        },
+        "/api/v1/subscribe": {
+            "post": {
+                "tags": [
+                    "Subscribe"
+                ],
+                "summary": "Subscribe news latter",
+                "description": "Subscribe news latter",
+                "operationId": "subscribeNewsLatter",
+                "requestBody": {
+                    "description": "Description",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {},
+                            "examples": {
+                                "Subscribe": {
+                                    "$ref": "#/components/examples/Subscribe"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "402": {
+                        "description": "Payment Required"
+                    }
+                }
+            }
         }
     },
     "components": {
+        "examples": {
+            "Subscribe": {
+                "summary": "Subscribe",
+                "value": {
+                    "name": "John Doe",
+                    "email": "johndoe@mail.com"
+                }
+            }
+        },
         "securitySchemes": {
             "passport": {
                 "type": "oauth2",
