@@ -51,10 +51,7 @@
       "Modules\\": "modules/",
       "Database\\Factories\\": "database/factories/",
       "Database\\Seeders\\": "database/seeders/"
-    },
-    "files": [
-      "app/Utils/Helper.php"
-    ]
+    }
   },
   "autoload-dev": {
     "psr-4": {

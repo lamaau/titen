@@ -1,13 +1,1 @@
-@import "tailwindcss/base";
-
-@import "tailwindcss/components";
-@import "table";
-@import "form";
-@import "button";
-@import "navigator";
-
-@import "tailwindcss/utilities";
-
-@import "@vueform/multiselect/themes/default.css";
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import "../../modules/Core/Resources/assets/css/app.css";

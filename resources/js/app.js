@@ -1,11 +1,15 @@
 import { createApp, h } from "vue";
-import stores from "~/stores";
-import helper from "~/utils/helper";
-import { excepts } from "~/utils/pages";
-import defaultLayout from "~/layouts/default.vue";
 import { InertiaProgress } from "@inertiajs/progress";
 import { createInertiaApp } from "@inertiajs/inertia-vue3";
-import registerGlobalComponent from "~/registerGlobalComponent";
+
+// core
+import codegoen from "~/codegoen";
+import helper from "~/utils/helper";
+import defaultLayout from "~/layouts/default.vue";
+
+// laravel
+import stores from "./stores";
+import { excepts } from "./utils/pages";
 
 InertiaProgress.init({
   showSpinner: true,
@@ -58,7 +62,7 @@ createInertiaApp({
     app.config.globalProperties.$helper = helper;
 
     // global component
-    app.use(registerGlobalComponent);
+    app.use(codegoen);
 
     app.mount(el);
     return app;
