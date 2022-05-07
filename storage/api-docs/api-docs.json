@@ -49,7 +49,7 @@
                 }
             }
         },
-        "/api/v1/categories/{id}?include=posts": {
+        "/api/v1/categories/{id}": {
             "get": {
                 "tags": [
                     "Category"
@@ -66,15 +66,6 @@
                             "type": "string"
                         },
                         "example": "f6f16655-588b-49c5-b620-d2791a6c925c"
-                    },
-                    {
-                        "name": "include",
-                        "in": "query",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "example": "posts"
                     }
                 ],
                 "responses": {
@@ -101,17 +92,6 @@
                 "summary": "List of Post",
                 "description": "Returns list of Post",
                 "operationId": "readAllPost",
-                "parameters": [
-                    {
-                        "name": "include",
-                        "in": "query",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "example": "author"
-                    }
-                ],
                 "responses": {
                     "200": {
                         "description": "Successful operation"
@@ -128,7 +108,7 @@
                 }
             }
         },
-        "/api/v1/posts/{id}?include=category": {
+        "/api/v1/posts/{id}": {
             "get": {
                 "tags": [
                     "Post"
@@ -145,15 +125,6 @@
                             "type": "string"
                         },
                         "example": "7fe911d0-0473-4b47-8fb3-97dccbd47e19"
-                    },
-                    {
-                        "name": "include",
-                        "in": "query",
-                        "required": false,
-                        "schema": {
-                            "type": "string"
-                        },
-                        "example": "category"
                     }
                 ],
                 "responses": {

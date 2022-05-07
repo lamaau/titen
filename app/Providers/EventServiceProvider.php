@@ -15,10 +15,10 @@ class EventServiceProvider extends ServiceProvider
      */
     protected $listen = [
         \Illuminate\Auth\Events\Failed::class => [
-            \App\Listeners\Auth\FailedListener::class,
+            \Modules\Core\Listeners\Auth\FailedListener::class,
         ],
         \Illuminate\Auth\Events\Login::class => [
-            \App\Listeners\Auth\SuccessListener::class,
+            \Modules\Core\Listeners\Auth\SuccessListener::class,
         ],
         \Spatie\Backup\Events\BackupWasSuccessful::class => [
             \App\Listeners\Backup\BackupHasSuccessful::class,

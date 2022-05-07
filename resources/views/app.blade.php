@@ -36,7 +36,7 @@
     ></script>
 </head>
 
-<body class="font-sans leading-none text-gray-700 antialiased overflow-x-hidden">
+<body class="font-sans leading-none text-gray-700 antialiased overflow-x-hidden m-0">
     @inertia
 </body>
 
