@@ -4,7 +4,6 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-use Modules\User\Entities\User;
 
 class UserFactory extends Factory
 {
@@ -13,7 +12,7 @@ class UserFactory extends Factory
      *
      * @var string
      */
-    protected $model = User::class;
+    protected $model = \Modules\Core\Entities\User::class;
 
     /**
      * Define the model's default state.
