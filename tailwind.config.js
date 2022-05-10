@@ -24,7 +24,6 @@ module.exports = {
     require("autoprefixer"),
     require("postcss-import"),
     require("@tailwindcss/aspect-ratio"),
-    require("@tailwindcss/custom-forms"),
     require("@tailwindcss/forms"),
     require("@tailwindcss/line-clamp"),
     require("@tailwindcss/typography"),

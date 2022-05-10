@@ -21,8 +21,7 @@
     "@inertiajs/progress": "^0.2.6",
     "@popperjs/core": "^2.11.0",
     "@tailwindcss/aspect-ratio": "^0.4.0",
-    "@tailwindcss/custom-forms": "^0.2.1",
-    "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/forms": "^0.5.1",
     "@tailwindcss/line-clamp": "^0.3.0",
     "@tailwindcss/typography": "^0.5.0",
     "@tinymce/tinymce-vue": "^4",
@@ -30,7 +29,6 @@
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vueform/multiselect": "^2.3.1",
     "apexcharts": "^3.33.2",
-    "autoprefixer": "^10.4.1",
     "axios": "^0.26.1",
     "babel-eslint": "^10.1.0",
     "date-fns": "^2.28.0",
@@ -41,6 +39,7 @@
     "laravel-mix-merge-manifest": "^2.0.0",
     "lodash": "^4.17.21",
     "mitt": "^3.0.0",
+    "pinia": "^2.0.14",
     "postcss": "^8.4.5",
     "postcss-import": "^12.0.1",
     "postcss-nesting": "^7.0.1",
@@ -57,8 +56,5 @@
     "vue-toast-notification": "^3.0",
     "vue3-apexcharts": "^1.4.1",
     "vuedraggable": "^4.1.0"
-  },
-  "dependencies": {
-    "pinia": "^2.0.14"
   }
 }
