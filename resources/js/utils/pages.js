@@ -1,3 +1,3 @@
-const excepts = ["auth/login"];
+const excepts = ["Core::auth/login"];
 
 export { excepts };

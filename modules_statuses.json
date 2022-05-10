@@ -1,4 +1,5 @@
 {
-  "Core": true,
-  "Post": true
+    "Core": true,
+    "Post": true,
+    "KamenTheme": true
 }

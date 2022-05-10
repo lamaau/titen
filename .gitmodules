@@ -1,0 +1,9 @@
+[submodule "modules/KamenTheme"]
+	path = modules/KamenTheme
+	url = git@github.com:lamaau/kamen-theme-post-module.git
+[submodule "modules/Post"]
+	path = modules/Post
+	url = git@github.com:lamaau/post-module.git
+[submodule "modules/Core"]
+	path = modules/Core
+	url = git@github.com:lamaau/core-module.git

@@ -22,3 +22,4 @@ modules/*
 !modules/Core
 !modules/Post
 !modules/User
+!modules/KamenTheme

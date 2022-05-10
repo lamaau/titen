@@ -1,3 +1,4 @@
+// vue inertia core
 import { createApp, h } from "vue";
 import { InertiaProgress } from "@inertiajs/progress";
 import { createInertiaApp } from "@inertiajs/inertia-vue3";
@@ -30,7 +31,7 @@ createInertiaApp({
         `../../modules/${modul}/Resources/assets/js/pages/${moduleFileName}.vue`
       );
 
-      if (page.layout == undefined && !excepts.includes(moduleFileName)) {
+      if (page.default.layout == undefined && !excepts.includes(name)) {
         page.default.layout = defaultLayout;
       }
 
@@ -38,7 +39,7 @@ createInertiaApp({
     } else {
       page = await import(`./pages/${name}.vue`);
 
-      if (page.layout == undefined && !excepts.includes(name)) {
+      if (page.default.layout == undefined && !excepts.includes(name)) {
         page.default.layout = defaultLayout;
       }
     }
@@ -60,6 +61,9 @@ createInertiaApp({
 
     // helper
     app.config.globalProperties.$helper = helper;
+
+    // zigy
+    app.config.globalProperties.$route = route
 
     // global component
     app.use(codegoen);
