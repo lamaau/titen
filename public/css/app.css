@@ -890,8 +890,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 0;
 }.pointer-events-none{
   pointer-events: none;
-}.static{
-  position: static;
 }.fixed{
   position: fixed;
 }.absolute{
@@ -914,34 +912,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 12px;
 }.right-0{
   right: 0px;
-}.top-0{
-  top: 0px;
-}.-bottom-2{
-  bottom: -0.5rem;
-}.bottom-0{
-  bottom: 0px;
-}.right-36{
-  right: 9rem;
-}.right-20{
-  right: 5rem;
-}.right-14{
-  right: 3.5rem;
-}.right-10{
-  right: 2.5rem;
 }.bottom-5{
   bottom: 1.25rem;
 }.right-5{
   right: 1.25rem;
-}.-bottom-6{
-  bottom: -1.5rem;
-}.-bottom-20{
-  bottom: -5rem;
-}.-bottom-12{
-  bottom: -3rem;
-}.-bottom-4{
-  bottom: -1rem;
-}.-bottom-5{
-  bottom: -1.25rem;
+}.-bottom-2{
+  bottom: -0.5rem;
 }.z-10{
   z-index: 10;
 }.z-20{
@@ -1209,6 +1185,8 @@ Ensure the default browser behavior of the `hidden` attribute.
           appearance: none;
 }.grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}.grid-cols-4{
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }.grid-cols-6{
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }.grid-cols-12{
@@ -1349,8 +1327,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-right-width: 0px;
 }.border-b-4{
   border-bottom-width: 4px;
-}.border-b-2{
-  border-bottom-width: 2px;
 }.border-dashed{
   border-style: dashed;
 }.border-none{
@@ -1375,9 +1351,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }.border-transparent{
   border-color: transparent;
-}.border-green-500{
-  --tw-border-opacity: 1;
-  border-color: rgb(34 197 94 / var(--tw-border-opacity));
 }.border-b-purple-500{
   --tw-border-opacity: 1;
   border-bottom-color: rgb(168 85 247 / var(--tw-border-opacity));
@@ -1427,6 +1400,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.bg-yellow-400{
   --tw-bg-opacity: 1;
   background-color: rgb(250 204 21 / var(--tw-bg-opacity));
+}.bg-pink-500\/80{
+  background-color: rgb(236 72 153 / 0.8);
 }.bg-pink-200{
   --tw-bg-opacity: 1;
   background-color: rgb(251 207 232 / var(--tw-bg-opacity));
@@ -1449,16 +1424,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.bg-black{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}.bg-pink-500\/50{
-  background-color: rgb(236 72 153 / 0.5);
-}.bg-pink-500\/40{
-  background-color: rgb(236 72 153 / 0.4);
-}.bg-pink-500\/70{
-  background-color: rgb(236 72 153 / 0.7);
-}.bg-pink-500\/60{
-  background-color: rgb(236 72 153 / 0.6);
-}.bg-pink-500\/80{
-  background-color: rgb(236 72 153 / 0.8);
 }.bg-opacity-50{
   --tw-bg-opacity: 0.5;
 }.bg-opacity-70{
@@ -1852,18 +1817,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.focus\:ring-red-500:focus{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(239 68 68 / var(--tw-ring-opacity));
+}.focus\:ring-pink-500\/80:focus{
+  --tw-ring-color: rgb(236 72 153 / 0.8);
 }.focus\:ring-pink-500:focus{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(236 72 153 / var(--tw-ring-opacity));
 }.focus\:ring-white:focus{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity));
-}.focus\:ring-pink-500\/80:focus{
-  --tw-ring-color: rgb(236 72 153 / 0.8);
 }.focus\:ring-offset-2:focus{
   --tw-ring-offset-width: 2px;
-}.focus\:ring-offset-transparent:focus{
-  --tw-ring-offset-color: transparent;
 }.focus\:ring-offset-current:focus{
   --tw-ring-offset-color: currentColor;
 }.focus-visible\:ring-2:focus-visible{
@@ -1967,8 +1930,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     --tw-space-x-reverse: 0;
     margin-right: calc(0.5rem * var(--tw-space-x-reverse));
     margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
-  }.md\:p-0{
-    padding: 0px;
   }.md\:px-6{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
