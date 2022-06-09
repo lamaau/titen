@@ -7,6 +7,7 @@ module.exports = {
   resolve: {
     alias: {
       "~": resolve("modules/Core/Resources/assets/js"),
+      School: resolve("modules/School/Resources/assets/js"),
       Kamen: resolve("modules/KamenTheme/Resources/assets/js"),
     },
     fallback: {
