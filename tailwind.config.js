@@ -59,7 +59,8 @@ module.exports = {
       },
       fontFamily: {
         sans: [
-          'Questrial',
+          'Montserrat',
+          // 'Questrial',
           'ui-sans-serif',
           'system-ui',
           '-apple-system',

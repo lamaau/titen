@@ -18,11 +18,11 @@ createInertiaApp({
 
     const app = createApp({ render: () => h(App, props) });
 
-    if (Object.values(m).length) {
-      Object.entries(m).forEach(([path, m]: any) => {
+    Object.entries(m).forEach(([path, m]: any) => {
+      if (Object.values(m).length) {
         app.use(m.default);
-      });
-    }
+      }
+    });
 
     app.use(plugin);
     app.use(ZiggyVue, Ziggy);
