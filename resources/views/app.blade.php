@@ -23,10 +23,7 @@
 
     @routes
     
-    <script
-        defer
-        src="{{ mix('/js/app.js') }}"
-    ></script>
+    @vite('resources/js/app.js')
 </head>
 
 <body class="font-sans leading-none text-gray-700 antialiased overflow-x-hidden m-0">
