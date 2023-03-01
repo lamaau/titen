@@ -35,7 +35,7 @@ return [
             'views/master' => 'Resources/views/layouts/master.blade.php',
             'scaffold/config' => 'Config/config.php',
             'composer' => 'composer.json',
-            'assets/js/app' => 'Resources/assets/js/app.js',
+            'assets/js/app' => 'Resources/assets/js/app.ts',
             'assets/sass/app' => 'Resources/assets/sass/app.scss',
             'vite' => 'vite.config.js',
             'package' => 'package.json',

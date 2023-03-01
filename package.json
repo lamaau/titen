@@ -54,6 +54,7 @@
     },
     "dependencies": {
         "@inertiajs/vue3": "^1.0.2",
-        "v-calendar": "^3.0.0-alpha.8"
+        "v-calendar": "^3.0.0-alpha.8",
+        "vite-plugin-vue-setup-extend": "^0.4.0"
     }
 }

@@ -1,5 +1,5 @@
-import '../css/app.css'
-import '../css/font.css'
+import "../css/app.css";
+import "../css/font.css";
 
 import { createApp, h } from "vue";
 import { createInertiaApp } from "@inertiajs/vue3";
@@ -12,10 +12,22 @@ createInertiaApp({
   title: (title) => `${title} - ${appName}`,
   resolve: (name) => resolvePageComponent(name),
   setup({ el, App, props, plugin }) {
-    return createApp({ render: () => h(App, props) })
-      .use(plugin)
-      .use(ZiggyVue, Ziggy)
-      .mount(el);
+    let m: Array<[]> = import.meta.globEager(
+      "../../modules/**/Resources/assets/js/app.ts",
+    );
+
+    const app = createApp({ render: () => h(App, props) });
+
+    if (Object.values(m).length) {
+      Object.entries(m).forEach(([path, m]: any) => {
+        app.use(m.default);
+      });
+    }
+
+    app.use(plugin);
+    app.use(ZiggyVue, Ziggy);
+
+    return app.mount(el);
   },
   progress: {
     color: "#4B5563",
@@ -28,7 +40,9 @@ function resolvePageComponent(name) {
 
   if (isModule.length > 1) {
     // Import pages from the modules folder
-    let pages = import.meta.glob("../../modules/**/Resources/assets/js/pages/*.vue");
+    let pages = import.meta.glob(
+      "../../modules/**/Resources/assets/js/pages/*.vue",
+    );
 
     // Sort and replace the wrong slash and dot with the correct slash
     const path = Object.keys(pages)
