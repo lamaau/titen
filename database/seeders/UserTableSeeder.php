@@ -3,10 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
-use Modules\Core\Entities\User;
-use Spatie\Permission\Models\Role;
 
 class UserTableSeeder extends Seeder
 {
@@ -17,19 +13,6 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        $user = User::create([
-            'id' => Str::uuid()->toString(),
-            'username' => 'admin',
-            'email' => 'admin@mail.com',
-            'password' => Hash::make('secret123'),
-            'email_verified_at' => now(),
-        ]);
-
-        Role::create([
-            'name' => 'Admin',
-            'created_by' => $user->id,
-        ]);
-
-        $user->assignRole('Admin');
+        //
     }
 }

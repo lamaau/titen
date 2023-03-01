@@ -16,17 +16,12 @@
         type="image/svg+xml"
         href="/favicon.ico"
     >
-    <link
-        href="{{ asset('css/app.css') }}"
-        rel="stylesheet"
-    >
-
     @routes
-    
-    @vite('resources/js/app.js')
+    @vite('resources/js/app.ts')
+    @inertiaHead
 </head>
 
-<body class="font-sans leading-none text-gray-700 antialiased overflow-x-hidden m-0">
+<body>
     @inertia
 </body>
 

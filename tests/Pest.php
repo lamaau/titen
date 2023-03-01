@@ -1,8 +1,5 @@
 <?php
 
-use Modules\Core\Entities\User;
-use function Pest\Laravel\actingAs;
-
 /*
 |--------------------------------------------------------------------------
 | Test Case
@@ -50,22 +47,7 @@ expect()->extend('toBeTrue', function () {
 |
 */
 
-function createUser($attributes = [])
+function func()
 {
-    return User::factory()->create($attributes);
-}
-
-function actingAsGeneralUser()
-{
-    createUser(['email' => 'general@mail.com']);
-    $user = User::firstWhere('email', 'general@mail.com');
-
-    return actingAs($user);
-}
-
-function actingAsAdminRole()
-{
-    $admin = User::firstWhere('email', 'admin@mail.com');
-
-    return actingAs($admin);
+    //
 }

@@ -1,9 +1,21 @@
 <?php
 
+use App\Http\Controllers\LandingController;
 use Nwidart\Modules\Activators\FileActivator;
 use Nwidart\Modules\Commands;
 
 return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Landing Page
+    |--------------------------------------------------------------------------
+    |
+    | Default app landing page controller
+    |
+    */
+
+    'landing_page_controller' => LandingController::class,
 
     /*
     |--------------------------------------------------------------------------
