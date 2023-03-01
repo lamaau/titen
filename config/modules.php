@@ -1,21 +1,9 @@
 <?php
 
-use App\Http\Controllers\LandingController;
 use Nwidart\Modules\Activators\FileActivator;
 use Nwidart\Modules\Commands;
 
 return [
-
-    /*
-    |--------------------------------------------------------------------------
-    | Landing Page
-    |--------------------------------------------------------------------------
-    |
-    | Default app landing page controller
-    |
-    */
-
-    'landing_page_controller' => LandingController::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -39,7 +27,7 @@ return [
 
     'stubs' => [
         'enabled' => false,
-        'path' => base_path('stubs/nwidart-stubs'),
+        'path' => base_path('vendor/nwidart/laravel-modules/src/Commands/stubs'),
         'files' => [
             'routes/web' => 'Routes/web.php',
             'routes/api' => 'Routes/api.php',
@@ -49,13 +37,13 @@ return [
             'composer' => 'composer.json',
             'assets/js/app' => 'Resources/assets/js/app.js',
             'assets/sass/app' => 'Resources/assets/sass/app.scss',
-            'webpack' => 'webpack.mix.js',
+            'vite' => 'vite.config.js',
             'package' => 'package.json',
         ],
         'replacements' => [
             'routes/web' => ['LOWER_NAME', 'STUDLY_NAME'],
             'routes/api' => ['LOWER_NAME'],
-            'webpack' => ['LOWER_NAME'],
+            'vite' => ['LOWER_NAME'],
             'json' => ['LOWER_NAME', 'STUDLY_NAME', 'MODULE_NAMESPACE', 'PROVIDER_NAMESPACE'],
             'views/index' => ['LOWER_NAME'],
             'views/master' => ['LOWER_NAME', 'STUDLY_NAME'],
@@ -178,6 +166,7 @@ return [
         Commands\RequestMakeCommand::class,
         Commands\RuleMakeCommand::class,
         Commands\MigrateCommand::class,
+        Commands\MigrateFreshCommand::class,
         Commands\MigrateRefreshCommand::class,
         Commands\MigrateResetCommand::class,
         Commands\MigrateRollbackCommand::class,
@@ -243,6 +232,7 @@ return [
     */
     'cache' => [
         'enabled' => false,
+        'driver' => 'file',
         'key' => 'laravel-modules',
         'lifetime' => 60,
     ],
@@ -255,7 +245,7 @@ return [
     */
     'register' => [
         'translations' => true,
-        /*
+        /**
          * load files on boot or register method
          *
          * Note: boot not compatible with asgardcms

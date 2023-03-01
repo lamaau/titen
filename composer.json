@@ -22,7 +22,7 @@
     "league/flysystem-aws-s3-v3": "^3.0.1",
     "maatwebsite/excel": "^3.1",
     "nedwors/navigator": "^0.3.0",
-    "nwidart/laravel-modules": "^9.0",
+    "nwidart/laravel-modules": "^10.0.0",
     "rizkhal/inertable": "^0.0.9",
     "spatie/flysystem-dropbox": "^2.0",
     "spatie/laravel-backup": "^8.1.1",

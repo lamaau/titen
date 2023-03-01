@@ -28,7 +28,7 @@ function resolvePageComponent(name) {
 
   if (isModule.length > 1) {
     // Import pages from the modules folder
-    let pages = import.meta.glob("../../modules/**/Resources/pages/*.vue");
+    let pages = import.meta.glob("../../modules/**/Resources/assets/js/pages/*.vue");
 
     // Sort and replace the wrong slash and dot with the correct slash
     const path = Object.keys(pages)
