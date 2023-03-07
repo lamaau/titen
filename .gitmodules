@@ -1,9 +1,11 @@
 [submodule "modules/User"]
 	path = modules/User
 	url = git@github.com:lamaau/titen-user-module.git
+
 [submodule "modules/Setting"]
 	path = modules/Setting
 	url = git@github.com:lamaau/titen-setting-module.git
+	
 [submodule "modules/Desa"]
 	path = modules/Desa
 	url = git@github.com:lamaau/titen-desa-module.git

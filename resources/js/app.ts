@@ -5,6 +5,8 @@ import { createApp, h } from "vue";
 import { createInertiaApp } from "@inertiajs/vue3";
 import { ZiggyVue } from "../../vendor/tightenco/ziggy/dist/vue.m";
 
+import Theme from "./theme";
+
 const appName =
   window.document.getElementsByTagName("title")[0]?.innerText || "Laravel";
 
@@ -25,6 +27,7 @@ createInertiaApp({
     });
 
     app.use(plugin);
+    app.use(Theme);
     app.use(ZiggyVue, Ziggy);
 
     return app.mount(el);
@@ -41,7 +44,7 @@ function resolvePageComponent(name) {
   if (isModule.length > 1) {
     // Import pages from the modules folder
     let pages = import.meta.glob(
-      "../../modules/**/Resources/assets/js/pages/*.vue",
+      "../../modules/**/Resources/assets/js/pages/**/*.vue",
     );
 
     // Sort and replace the wrong slash and dot with the correct slash

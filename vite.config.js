@@ -22,6 +22,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
+      "~": "/resources/js",
       Modules: path.resolve(__dirname, "modules"),
     },
   },
