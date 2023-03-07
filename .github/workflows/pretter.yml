@@ -1,4 +1,4 @@
-name: Continuous Integration
+name: Check & Fix Styling Prettier
 
 # This action works with pull requests and pushes
 on:
@@ -17,9 +17,11 @@ jobs:
         with:
           # Make sure the actual branch is checked out when running on pull requests
           ref: ${{ github.head_ref }}
+          fetch-depth: 0
 
       - name: Prettify code
-        uses: creyD/prettier_action@v4.2
+        uses: creyD/prettier_action@v4.3
         with:
+          only_changed: true
           # This part is also where you can pass other options, for example:
           prettier_options:  --write --loglevel warn 'resources/js/**/*.{js,vue}' 'modules/**/Resources/assets/js/**/*.{js,vue}'
