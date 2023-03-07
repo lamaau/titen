@@ -2,11 +2,11 @@
 
 namespace App\Http\Middleware;
 
-use Inertia\Middleware;
-use Tightenco\Ziggy\Ziggy;
 use Illuminate\Http\Request;
+use Inertia\Middleware;
 use Nedwors\Navigator\Facades\Nav;
 use Tabuna\Breadcrumbs\Breadcrumbs;
+use Tightenco\Ziggy\Ziggy;
 
 class HandleInertiaRequests extends Middleware
 {
