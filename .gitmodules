@@ -1,3 +1,8 @@
+# our theme
+[submodule "titne-ui"]
+	path = resources/js/theme
+	url = git@github.com:lamaau/titen-ui.git
+
 [submodule "modules/User"]
 	path = modules/User
 	url = git@github.com:lamaau/titen-user-module.git

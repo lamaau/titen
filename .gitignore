@@ -17,6 +17,9 @@ yarn-error.log
 /.idea
 /.vscode
 
-# remove all
+# remove all module
 modules/*
 !modules/.gitkeep
+
+# remove titen-ui
+resources/js/theme

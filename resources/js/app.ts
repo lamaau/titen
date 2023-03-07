@@ -5,8 +5,8 @@ import { createApp, h } from "vue";
 import { createInertiaApp } from "@inertiajs/vue3";
 import { ZiggyVue } from "../../vendor/tightenco/ziggy/dist/vue.m";
 
-import Theme from "./theme";
-import AuthenticatedLayout from "./theme/layouts/VAuthenticated.vue";
+import Theme from "./theme/packages";
+import AuthenticatedLayout from "./theme/packages/vue3-inertia/layouts/VAuthenticated.vue";
 
 const appName =
   window.document.getElementsByTagName("title")[0]?.innerText || "Laravel";
