@@ -1,4 +1,4 @@
-<script setup name="VAuth">
+<script setup name="VAuthLayout">
 //
 </script>
 <template>

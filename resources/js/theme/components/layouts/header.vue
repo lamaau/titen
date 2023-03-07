@@ -1,21 +1,20 @@
 <script setup name="VHeader" lang="ts">
 import { ref } from "vue";
+import route from "ziggy-js";
 import { usePage } from "@inertiajs/vue3";
 import ResetPasswordModal from "./reset-password-modal.vue";
 
 const appName = import.meta.env.VITE_APP_NAME;
 
-const props = defineProps<{
+defineProps<{
   user: object;
   state: boolean;
-  tenant?: object;
-  expiredInDay: number | null;
 }>();
 
 const page = usePage();
 
 const form = ref(null);
-const token = ref(page.props.csrf_token);
+const token = ref(page.props.csrf);
 
 const logout = () => {
   form.value.submit();
@@ -23,19 +22,6 @@ const logout = () => {
 </script>
 <template>
   <div>
-    <div
-      v-show="typeof expiredInDay === 'number' && expiredInDay <= 5"
-      class="bg-orange-300 w-full px-4 py-4 inline-flex justify-center"
-    >
-      <div class="inline-flex items-center space-x-2 text-orange-800">
-        <v-icon name="BellAlertIcon" class="w-5 h-5" />
-        <h1>
-          Akun anda akan ditangguhkan dalam {{ expiredInDay }} hari, harap
-          segera lakukan pembayaran.
-        </h1>
-      </div>
-    </div>
-
     <nav class="bg-white border-b border-gray-200 fixed z-30 w-full">
       <div class="px-3 py-3 lg:px-5 lg:pl-3">
         <div class="flex items-center justify-between">
@@ -76,11 +62,10 @@ const logout = () => {
                 ></path>
               </svg>
             </button>
-
             <a href="#" class="text-xl font-bold flex items-center ml-2">
-              <span class="font-extrabold text-gray-900">{{
-                tenant.name ?? appName
-              }}</span>
+              <span class="font-extrabold text-gray-900">
+                {{ appName }}
+              </span>
             </a>
           </div>
 
@@ -113,7 +98,7 @@ const logout = () => {
                     <form
                       ref="form"
                       :action="route('auth.logout')"
-                      method="post"
+                      method="POST"
                       class="hidden"
                     >
                       <input type="text" name="_token" :value="token" />

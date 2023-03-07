@@ -22,15 +22,15 @@
             "~/*": [
                 "resources/js/*"
             ],
-            "@/*": [
-                "resources/assets/*"
+            "@modules/*": [
+                "modules/*"
             ]
         },
         "outDir": "./public/build/assets"
     },
     "typeRoots": [
         "./node_modules/@types",
-        "resources/js/types"
+        "resources/js/theme/types"
     ],
     "include": [
         "resources/js/**/*.ts",

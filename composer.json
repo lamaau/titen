@@ -26,7 +26,7 @@
     "rizkhal/inertable": "^0.0.9",
     "spatie/flysystem-dropbox": "^2.0",
     "spatie/laravel-backup": "^8.1.1",
-    "spatie/laravel-permission": "^5.5.1",
+    "spatie/laravel-permission": "^5.9",
     "spatie/laravel-query-builder": "^5.0",
     "tabuna/breadcrumbs": "^3.0.0",
     "tightenco/ziggy": "^1.4",

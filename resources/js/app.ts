@@ -6,13 +6,14 @@ import { createInertiaApp } from "@inertiajs/vue3";
 import { ZiggyVue } from "../../vendor/tightenco/ziggy/dist/vue.m";
 
 import Theme from "./theme";
+import AuthenticatedLayout from "./theme/layouts/VAuthenticated.vue";
 
 const appName =
   window.document.getElementsByTagName("title")[0]?.innerText || "Laravel";
 
 createInertiaApp({
   title: (title) => `${title} - ${appName}`,
-  resolve: (name) => resolvePageComponent(name),
+  resolve: async (name) => await resolvePageComponent(name),
   setup({ el, App, props, plugin }) {
     let m: Array<[]> = import.meta.globEager(
       "../../modules/**/Resources/assets/js/app.ts",
@@ -37,7 +38,7 @@ createInertiaApp({
   },
 });
 
-function resolvePageComponent(name) {
+async function resolvePageComponent(name: string) {
   // Check if the name is a module
   let isModule = name.split("::");
 
@@ -62,7 +63,14 @@ function resolvePageComponent(name) {
     }
 
     // Return the page
-    return typeof pages[path] === "function" ? pages[path]() : pages[path];
+    const page: any =
+      typeof pages[path] === "function" ? await pages[path]() : pages[path];
+
+    if (page.default.layout === undefined) {
+      page.default.layout = AuthenticatedLayout;
+    }
+
+    return page;
   } else {
     // Import pages from the core application folder since it's not a module
     let pages = import.meta.glob("./pages/**/*.vue");
@@ -78,6 +86,11 @@ function resolvePageComponent(name) {
     }
 
     // Return the page
-    return typeof pages[path] === "function" ? pages[path]() : pages[path];
+    const page: any =
+      typeof pages[path] === "function" ? await pages[path]() : pages[path];
+
+    // set default layout here.
+
+    return page;
   }
 }

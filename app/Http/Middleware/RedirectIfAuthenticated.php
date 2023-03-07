@@ -7,7 +7,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Modules\Core\Providers\RouteServiceProvider;
+use Modules\User\Providers\RouteServiceProvider;
 
 class RedirectIfAuthenticated
 {
@@ -23,7 +23,7 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect(route(RouteServiceProvider::HOME));
+                return redirect(route(RouteServiceProvider::HOME_ROUTE));
             }
         }
 
