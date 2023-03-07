@@ -1,19 +1,9 @@
 <script setup name="VFooter">
-// 
+//
 </script>
 <template>
   <footer
-    class="
-      bg-white
-      md:flex md:items-center md:justify-between
-      shadow
-      rounded-lg
-      p-4
-      md:p-6
-      xl:p-8
-      my-6
-      mx-4
-    "
+    class="bg-white md:flex md:items-center md:justify-between shadow rounded-lg p-4 md:p-6 xl:p-8 my-6 mx-4"
   >
     <ul class="flex items-center flex-wrap mb-6 md:mb-0">
       <li>

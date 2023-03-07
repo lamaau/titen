@@ -40,6 +40,14 @@ function handleBlur() {
       <slot />
     </div>
 
-    <input :type="inputType" ref="inputElement" @blur="handleBlur" v-model="inputValue" @keypress.enter="handleBlur" class="border w-max border-gray focus:ring focus:outline-none focus:ring-gray-500" :class="`${showInput ? 'block' : 'hidden'}`" />
+    <input
+      :type="inputType"
+      ref="inputElement"
+      @blur="handleBlur"
+      v-model="inputValue"
+      @keypress.enter="handleBlur"
+      class="border w-max border-gray focus:ring focus:outline-none focus:ring-gray-500"
+      :class="`${showInput ? 'block' : 'hidden'}`"
+    />
   </div>
 </template>

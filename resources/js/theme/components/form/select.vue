@@ -1,6 +1,10 @@
 <template>
   <div :class="$attrs.class">
-    <label v-if="label" class="text-sm font-medium text-gray-900 block mb-1" :for="id">
+    <label
+      v-if="label"
+      class="text-sm font-medium text-gray-900 block mb-1"
+      :for="id"
+    >
       {{ label }}
       <span v-show="required" class="text-red-500">*</span>
     </label>
@@ -10,17 +14,7 @@
       v-model="selected"
       v-bind="{ ...$attrs, class: null }"
       :class="{ 'border-red-500 border': error }"
-      class="
-        bg-gray-50
-        border border-gray-300
-        text-gray-900
-        sm:text-sm
-        rounded
-        focus:ring-gray-600 focus:border-gray-600
-        block
-        w-full
-        p-2.5
-      "
+      class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-gray-600 focus:border-gray-600 block w-full p-2.5"
     >
       <slot />
     </select>

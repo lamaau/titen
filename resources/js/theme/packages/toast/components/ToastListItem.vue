@@ -43,25 +43,14 @@ const emit = defineEmits(["remove"]);
     </div>
     <div class="flex flex-col ml-3">
       <h1 class="text-sm font-semibold text-gray-700">{{ props.title }}</h1>
-      <p v-show="props?.message" class="text-xs text-gray-400">{{ props?.message }}</p>
+      <p v-show="props?.message" class="text-xs text-gray-400">
+        {{ props?.message }}
+      </p>
     </div>
     <button
       @click="emit('remove')"
       type="button"
-      class="
-        -mx-1.5
-        -my-1.5
-        ml-auto
-        inline-flex
-        h-8
-        w-8
-        rounded-lg
-        bg-white
-        p-1.5
-        text-gray-400
-        hover:bg-gray-100 hover:text-gray-900
-        focus:ring-2 focus:ring-gray-300
-      "
+      class="-mx-1.5 -my-1.5 ml-auto inline-flex h-8 w-8 rounded-lg bg-white p-1.5 text-gray-400 hover:bg-gray-100 hover:text-gray-900 focus:ring-2 focus:ring-gray-300"
       data-dismiss-target="#toast-default"
       aria-label="Close"
     >

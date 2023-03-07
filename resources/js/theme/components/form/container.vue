@@ -15,17 +15,7 @@ defineProps({
         <button
           type="button"
           @click="$modal.close()"
-          class="
-            text-gray-400
-            bg-transparent
-            hover:bg-gray-200 hover:text-gray-900
-            rounded-lg
-            text-sm
-            p-1.5
-            ml-auto
-            inline-flex
-            items-center
-          "
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
         >
           <svg
             class="w-5 h-5"
@@ -51,18 +41,7 @@ defineProps({
           <button
             v-for="(action, index) in actions"
             :key="index"
-            class="
-              text-white
-              bg-indigo-600
-              hover:bg-indigo-700
-              focus:ring-4 focus:ring-indigo-200
-              font-medium
-              rounded-lg
-              text-sm
-              px-5
-              py-2.5
-              text-center
-            "
+            class="text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
             type="submit"
           >
             {{ action.text }}

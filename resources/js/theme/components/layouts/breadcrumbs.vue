@@ -7,7 +7,10 @@ defineProps({
   <nav class="flex mb-5" aria-label="Breadcrumb">
     <ol class="inline-flex items-center">
       <li class="inline-flex items-center">
-        <a href="#" class="text-gray-700 hover:text-gray-900 inline-flex items-center">
+        <a
+          href="#"
+          class="text-gray-700 hover:text-gray-900 inline-flex items-center"
+        >
           <v-icon name="HomeIcon" type="outline" class="w-5 h-5" />
           <svg
             class="w-4 h-4 text-gray-400 mx-2"
@@ -22,7 +25,12 @@ defineProps({
             ></path>
           </svg>
         </a>
-        <a href="#" class="text-sm font-medium text-gray-700 hover:text-gray-900"> Beranda </a>
+        <a
+          href="#"
+          class="text-sm font-medium text-gray-700 hover:text-gray-900"
+        >
+          Beranda
+        </a>
       </li>
       <li v-for="(list, index) in lists" :key="index">
         <div class="flex items-center">
@@ -38,7 +46,10 @@ defineProps({
               clip-rule="evenodd"
             ></path>
           </svg>
-          <a href="#" class="text-sm font-medium text-gray-700 hover:text-gray-900">
+          <a
+            href="#"
+            class="text-sm font-medium text-gray-700 hover:text-gray-900"
+          >
             {{ list.title }}
           </a>
         </div>

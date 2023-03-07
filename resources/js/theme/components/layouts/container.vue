@@ -4,7 +4,7 @@ const props = defineProps({
   summary: {
     type: String,
     default: null,
-  }
+  },
 });
 </script>
 <template>
@@ -12,7 +12,9 @@ const props = defineProps({
     <slot name="left">
       <div>
         <h1 class="font-bold text-xl text-slate-700">{{ title }}</h1>
-        <p v-show="summary" class="text-sm text-gray-500 mt-2.5">{{ summary }}</p>
+        <p v-show="summary" class="text-sm text-gray-500 mt-2.5">
+          {{ summary }}
+        </p>
       </div>
     </slot>
 
