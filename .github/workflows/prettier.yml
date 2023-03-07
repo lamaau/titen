@@ -24,4 +24,4 @@ jobs:
         with:
           dry: true
           only_changed: true
-          prettier_options:  --write --config ./.prettierrc --loglevel warn ./resources/js/**/*.{js,vue}
+          prettier_options:  --write --config ./.prettierrc --loglevel warn ./resources/js/**/*.{js,vue} ./modules/**/Resources/assets/js/**/*.{js,vue}
