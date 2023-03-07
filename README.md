@@ -11,4 +11,8 @@
 <a href="https://github.com/lamaau/titen/actions/workflows/pint.yml/badge.svg">
 <img alt="Pint" src="https://github.com/lamaau/titen/actions/workflows/pint.yml/badge.svg">
 </a>
+
+<a href="https://github.com/lamaau/titen/actions/workflows/prettier.yml/badge.svg">
+<img alt="Prettier" src="https://github.com/lamaau/titen/actions/workflows/prettier.yml/badge.svg">
+</a>
 </p>
